@@ -1,13 +1,17 @@
 * {
     box-sizing: border-box;
+    font-family: $primary-font;
 }
 
 @media (max-width: 576px) {
-    .sidebar {
+    .sidebar, .mediumnavbar {
         display: none;
     }
     .banner-image {
         margin-left: 0;
+    }
+    .smallnavbar {
+        margin-bottom: 0;
     }
   }
 
@@ -18,14 +22,27 @@
     }
 }
 @media (min-width:768px) {
+    .mediumnavbar, .smallnavbar {
+        display: none;
+    }
     .banner-image {
         margin-left: 160px;
     }
 }
 
-// Banner picture
-.bannerpic {
-    height: 80vh;
-    width: 100%;
+.mainlist {
+    li:hover {
+        text-decoration: underline;
+        text-shadow:none;
+        background-color: none;
+    }
+}
+.mainlist:hover {
+    text-decoration-color: none;
+    background-color:none;
+}
+    
+.nav-item:hover {
+    background-color: none;
 }
 

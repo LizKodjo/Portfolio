@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    
+}
+body{
     font-family: $primary-font;
 }
 
@@ -46,3 +49,7 @@
     background-color: none;
 }
 
+// Scheme page
+.scheme {
+    margin-left: 160px;
+}

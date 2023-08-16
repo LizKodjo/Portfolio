@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: "Playfair Display", serif;
 }
 
@@ -40,6 +43,10 @@
 
 .nav-item:hover {
   background-color: none;
+}
+
+.scheme {
+  margin-left: 160px;
 }
 
 .sidebar {

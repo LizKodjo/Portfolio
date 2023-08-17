@@ -3,6 +3,9 @@
 
 <head>
     <title>SCS Scheme</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -24,19 +27,19 @@
             <div class="container maininfo">
                 <ul class="nav flex-column mainlist">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/aboutme.html">About Me</a>
+                        <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="myportfolio.html">My Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="./pages/codeexamples.html">Coding Examples</a>
+                        <a class="nav-item" href="codeexamples.html">Coding Examples</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="./pages/scsscheme.html">SCS Scheme</a>
+                        <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="./pages/contactme.html">Contact Me</a>
+                        <a class="nav-item" href="contactme.html">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -107,47 +110,71 @@
         </nav> -->
     </header>
     <main>
+
+        <!-- Main picture -->
+        <div class="container-sm main-pic">
+            <div class="banner-image">
+                <img class="pagesbannerpic" src="../img/pexels-ache-surya-16110773.jpg" alt="Seaside!">
+            </div>
+        </div>
+
+
         <!-- Introduction -->
         <div class="container scheme">
-            <h1>Introduction to Scion Coalition Scheme</h1>
-            <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in
-                order to
-                give willing candidates
-                the opportunity to enter the industry as web developers. Under the supervision of senior web developers,
-                scions
-                generally aim to complete
-                training within six to nine months. The course is intensive and therefore the level of learning achieved
-                is
-                extensive in a short space of time.
-            </p>
+
+            <div class="container intro">
+                <h1>Introduction to Scion Coalition Scheme</h1>
+                <p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters
+                    in
+                    order to
+                    give willing candidates
+                    the opportunity to enter the industry as web developers. Under the supervision of senior web
+                    developers,
+                    scions
+                    generally aim to complete
+                    training within six to nine months. The course is intensive and therefore the level of learning
+                    achieved
+                    is
+                    extensive in a short space of time.
+                </p>
+            </div>
 
 
             <!-- Treehouse -->
-            <h2>Treehouse</h2>
 
-            <p>Treehouse is an online learning community, featuring videos covering a number of topics from basic HTML
-                to C#
-                programming, iOS development,
-                data analysis, and more. By completing courses users can earn points, allowing them to track their
-                progress
-                and
-                see how much they've covered in certain areas.<br>
-                Total Score: <br>
-                <a href="#">teamtreehouse.com/xxxxx</a>
-            </p>
+            <div class="row">
+                <div class="col-sm-6 container treehouse">
+                    <h2>Treehouse</h2>
+                    <p>Treehouse is an online learning community, featuring videos covering a number of topics from
+                        basic
+                        HTML
+                        to C#
+                        programming, iOS development,
+                        data analysis, and more. By completing courses users can earn points, allowing them to track
+                        their
+                        progress
+                        and
+                        see how much they've covered in certain areas.<br>
+                        Total Score: <br>
+                        <a href="#">teamtreehouse.com/xxxxx</a>
+                    </p>
+                </div>
 
-            <!-- About Netmatters -->
-            <h2>About Netmatters</h2>
-            <ul>
-                <li>Established in 2008</li>
-                <li>Norfolk's leading technology company</li>
-                <li>Winner of the Princess Royal Training Award</li>
-                <li>Winner of EDP Skills of Tomorrow Award</li>
-                <li>80+ staff, 2 locations across Norfolk</li>
-                <li>Digital Marketing, Website & Software development & IT Support</li>
-                <li>Broad spectrum of clients, working nationwide</li>
-                <li>Operate to strict company values.</li>
-            </ul>
+                <!-- About Netmatters -->
+                <div class="col-sm-6 container netmatters">
+                    <h2>About Netmatters</h2>
+                    <ul>
+                        <li>Established in 2008</li>
+                        <li>Norfolk's leading technology company</li>
+                        <li>Winner of the Princess Royal Training Award</li>
+                        <li>Winner of EDP Skills of Tomorrow Award</li>
+                        <li>80+ staff, 2 locations across Norfolk</li>
+                        <li>Digital Marketing, Website & Software development & IT Support</li>
+                        <li>Broad spectrum of clients, working nationwide</li>
+                        <li>Operate to strict company values.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 </body>

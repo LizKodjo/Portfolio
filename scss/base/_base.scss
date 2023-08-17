@@ -3,7 +3,10 @@
     
 }
 body{
-    font-family: $primary-font;
+    font-size : $base__font-size;
+    line-height: calc($base__line / $base__font-size);
+    font-family: $font-family--primary;
+    margin:0;
 }
 
 @media (max-width: 576px) {
@@ -33,13 +36,13 @@ body{
     }
 }
 
-.mainlist {
+
     li:hover {
         text-decoration: underline;
         text-shadow:none;
         background-color: none;
     }
-}
+
 .mainlist:hover {
     text-decoration-color: none;
     background-color:none;
@@ -52,4 +55,5 @@ body{
 // Scheme page
 .scheme {
     margin-left: 160px;
+
 }

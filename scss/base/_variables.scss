@@ -1,1 +1,19 @@
-$primary-font               : 'Playfair Display', serif;
+$font-family--secondary         : 'Playfair Display', serif;
+$font-url--google               : 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&display=swap';
+$font-family--primary           : 'Bricolage Grotesque', sans-serif;
+
+$font-weight--regular           : 400;
+$font-weight--medium            : 500;
+
+// Text
+$base__font-size                : 25px;
+$base__line                     : 24px;
+
+@if variable-exists(font-url--google) {
+    @import url($font-url--google);
+}
+
+// Calculate em values
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}

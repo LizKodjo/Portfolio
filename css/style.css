@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&display=swap");
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  line-height: 0.96;
+  font-family: "Bricolage Grotesque", sans-serif;
+  margin: 0;
 }
 
 @media (max-width: 576px) {
@@ -30,7 +34,7 @@ body {
     margin-left: 160px;
   }
 }
-.mainlist li:hover {
+li:hover {
   text-decoration: underline;
   text-shadow: none;
   background-color: none;
@@ -78,9 +82,10 @@ body {
   font-size: 2rem;
 }
 
-.bannerpic {
+.bannerpic, .pagesbannerpic {
   height: 100vh;
   width: 100%;
+  filter: grayscale(100%);
 }
 
 .headings {
@@ -92,6 +97,12 @@ body {
   text-align: center;
   font-weight: bold;
   color: black;
+}
+
+.scheme {
+  position: absolute;
+  top: 10%;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,8 @@
 // Banner picture
-.bannerpic {
+.bannerpic, .pagesbannerpic {
     height: 100vh;
     width: 100%;
+    filter:grayscale(100%);
 }
 
 // Heading for main picture
@@ -14,4 +15,9 @@
     text-align: center;
     font-weight: bold;
     color: black;
+}
+.scheme {
+    position: absolute;
+    top: 10%;
+    padding: 15px;
 }

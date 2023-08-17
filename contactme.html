@@ -2,13 +2,17 @@
 <html>
 
 <head>
-    <title>Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCS Scheme</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/Bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header>
         <!-- Side nav -->
         <!-- Initials -->
@@ -16,7 +20,7 @@
             <div class="container logo">
                 <nav class="navbar navbar-expand-sm bg-dark nav-dark">
                     <div class="container initials">
-                        <a class="navbar-brand eklogo" href="#">EK</a>
+                        <a class="navbar-brand eklogo" href="index.html">EK</a>
                     </div>
                 </nav>
             </div>
@@ -25,19 +29,19 @@
             <div class="container maininfo">
                 <ul class="nav flex-column mainlist">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/aboutme.html">About Me</a>
+                        <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/myportfolio.html">My Portfolio</a>
+                        <a class="nav-link" href="myportfolio.html">My Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="./pages/codeexamples.html">Coding Examples</a>
+                        <a class="nav-item" href="codeexamples.html">Coding Examples</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="./pages/scsscheme.html">SCS Scheme</a>
+                        <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="./pages/contactme.html">Contact Me</a>
+                        <a class="nav-item" href="contactme.html">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +78,95 @@
                 </ul>
             </div>
         </nav>
+
+        <!-- Tablet navbars -->
+
+        <!-- <nav class="navbar bg-dark navbar-dark mediumnavbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">EK</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item" href="#">Coding Examples</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="#">SCS Scheme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item" href="#">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
     </header>
+    <main>
+
+        <!-- Main picture -->
+        <div class="container-sm main-pic">
+            <div class="banner-image">
+                <h1 class="banner-title">Contact Me</h1>
+                <img class="bannerpic" src="img/pexels-ache-surya-16110773.jpg" alt="Seaside!">
+            </div>
+        </div>
+
+        <div class="main-inner">
+            <div class="container">
+                <!-- Get in touch -->
+                <div class="col-sm-4">
+                    <h1>Get In Touch</h1>
+                    <p>For any further information, please do not hesitate to call or email me on the details below:</p>
+                    <p>07394 705450</p>
+                    <p>elizabeth.kodjo@yahoo.com</p>
+                </div>
+                <!-- Contact Form -->
+                <div class="col-sm-8">
+                    <form>
+                        <div class="mb-3 mt-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="fname">First Name*:</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name*"
+                                        name="fname">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="lname">Last Name*:</label>
+                                    <input type="text" class="form-control" id="lname" placeholder="Last Name*"
+                                        name="lname">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email Address"
+                                    name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject">Subject:</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                    name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" rows="5" id="message" name="text"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

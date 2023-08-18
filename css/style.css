@@ -58,10 +58,18 @@ body {
   background-color: gainsboro;
   overflow-x: hidden;
   padding-top: 20px;
+  border-right: 2px solid black;
+}
+.sidebar .maininfo a {
+  color: black;
+}
+.sidebar .maininfo .mainlist :hover {
+  text-decoration: underline;
 }
 
 .eklogo {
   font-size: 45px;
+  color: black;
 }
 
 .logo {
@@ -69,27 +77,13 @@ body {
   padding-top: 20px;
 }
 
-.initials, .maininfo {
+.initials,
+.maininfo {
   width: auto;
 }
 
 .maininfo {
   font-size: 2rem;
-}
-
-li:hover {
-  text-decoration: underline;
-  text-shadow: none;
-  background-color: none;
-}
-
-.mainlist:hover {
-  text-decoration-color: none;
-  background-color: none;
-}
-
-.nav-item:hover {
-  background-color: none;
 }
 
 .main-pic .banner-image .bannerpic {
@@ -104,6 +98,7 @@ li:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
+  color: black;
 }
 
 .headings {
@@ -128,10 +123,13 @@ li:hover {
 }
 
 .main-inner {
-  background-color: blanchedalmond;
+  background-color: gainsboro;
+  padding: 15px;
 }
 .main-inner .container .col-sm-8 {
   margin-top: 10px;
+  background-color: darkgray;
+  padding: 15px;
 }
 .main-inner .container .getintouch {
   text-align: center;

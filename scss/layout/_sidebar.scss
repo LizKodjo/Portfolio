@@ -8,34 +8,40 @@
     background-color: gainsboro;
     overflow-x: hidden;
     padding-top: 20px;
+    border-right: 2px solid black;
+
+    .maininfo {
+        a {
+            color: black;
+        }
+
+        .mainlist {
+
+            :hover {
+                text-decoration: underline;
+
+            }
+        }
+    }
 }
+
+
 
 .eklogo {
     font-size: 45px;
+    color: black;
 }
 
 .logo {
     width: auto;
     padding-top: 20px;
 }
-.initials, .maininfo {
+
+.initials,
+.maininfo {
     width: auto;
 }
+
 .maininfo {
     font-size: 2rem;
-}
-
-li:hover {
-    text-decoration: underline;
-    text-shadow: none;
-    background-color: none;
-}
-
-.mainlist:hover {
-    text-decoration-color: none;
-    background-color: none;
-}
-
-.nav-item:hover {
-    background-color: none;
 }

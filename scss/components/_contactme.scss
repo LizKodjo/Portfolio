@@ -9,10 +9,13 @@
 }
 
 .main-inner {
-    background-color: blanchedalmond;
+    background-color: gainsboro;
+    padding: 15px;
     .container {
         .col-sm-8 {
             margin-top: 10px;
+            background-color: darkgray;
+            padding: 15px;
         }
 
         .getintouch {

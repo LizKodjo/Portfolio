@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elizabeth Kodjo | Web Developer</title>
+    <script src="https://kit.fontawesome.com/f8bda8a3df.js" crossorigin="anonymous"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,7 @@
                         <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="contactme.html">Contact Me</a>
+                        <a class="nav-item" href="#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -77,44 +78,11 @@
                         <a class="nav-item" href="#">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="#">Contact Me</a>
+                        <a class="nav-item" href="#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
-        <!-- Tablet navbars -->
-
-        <!-- <nav class="navbar bg-dark navbar-dark mediumnavbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">EK</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-            </div>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">My Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="#">Coding Examples</a>
-                    </li>
-                    <li>
-                        <a class="nav-item" href="#">SCS Scheme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="#">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
-
     </header>
     <main>
          <!-- Main picture -->
@@ -131,6 +99,52 @@
                 </div>
                 <div class="sub-heading">
                     <h2>I'm a Web Developer</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-inner">
+            <div class="container" id="contact">
+                <!-- Get in touch -->
+                <div class="col-sm-4 getintouch">
+                    <h1>Get In Touch</h1>
+                    <p>For any further information, please do not hesitate to call or email me on my details below:</p>
+                    <p><span><i class="fa-solid fa-mobile-screen"></i></span> 07394 705450</p>
+                    <p><span><i class="fa-regular fa-envelope"></i></span> elizabeth.kodjo@yahoo.com</p>
+                </div>
+                <!-- Contact Form -->
+                <div class="col-sm-8">
+                    <form>
+                        <div class="mb-3 mt-3">
+                            <div class="row formnames">
+                                <div class="col-sm-6">
+                                    <label for="fname">First Name *:</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name*"
+                                        name="fname">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="lname">Last Name *:</label>
+                                    <input type="text" class="form-control" id="lname" placeholder="Last Name*"
+                                        name="lname">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email Address"
+                                    name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject">Subject:</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                    name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" rows="5" id="message" name="text"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

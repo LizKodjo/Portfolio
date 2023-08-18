@@ -1,0 +1,27 @@
+.formnames {
+    margin: 0 -15px;
+}
+
+.btn-primary {
+    margin-top: 15px;
+    background-color: gray;
+    border-color: gray;
+}
+
+.main-inner {
+    background-color: blanchedalmond;
+    .container {
+        .col-sm-8 {
+            margin-top: 10px;
+        }
+
+        .getintouch {
+            text-align: center;
+
+            h1 {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+

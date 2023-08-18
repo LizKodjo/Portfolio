@@ -1,0 +1,24 @@
+// Removing underline when hovering over list
+.main-inner {
+    // Container
+    .row {
+        // Sub container with subsections
+        .netmatters {
+            // Listed items
+            :hover {
+                text-decoration-line: none;
+            }
+        }
+    }
+}
+
+// Removing margin to even out space
+.main-inner {
+    // Container
+    .scheme {
+        // Sub container
+        .row {
+            margin:0;
+        }
+    }
+}

@@ -5,7 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: pink;
+    background-color: gainsboro;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -23,4 +23,19 @@
 }
 .maininfo {
     font-size: 2rem;
+}
+
+li:hover {
+    text-decoration: underline;
+    text-shadow: none;
+    background-color: none;
+}
+
+.mainlist:hover {
+    text-decoration-color: none;
+    background-color: none;
+}
+
+.nav-item:hover {
+    background-color: none;
 }

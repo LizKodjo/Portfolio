@@ -1,0 +1,66 @@
+.container {
+    @media(min-width:576px) {}
+
+    @media(min-width:768px) {}
+
+    @media(min-width:992px) {}
+
+    @media(min-width:1200px) {}
+
+    width:100%;
+}
+
+@media (max-width: 576px) {
+    .main-inner {
+        margin-left: 0;
+    }
+
+    .sidebar,
+    .mediumnavbar {
+        display: none;
+    }
+
+    .smallnavbar {
+        margin-bottom: 0;
+    }
+
+    .main-pic {
+        .banner-image {
+            .banner-image {
+                margin-left: 0;
+            }
+        }
+    }
+    .main-inner {
+        .container {
+            .getintouch {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 576px) {
+    .smallnavbar {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+
+    .mediumnavbar,
+    .smallnavbar {
+        display: none;
+    }
+
+    .banner-image {
+        margin-left: 160px;
+    }
+
+    // Scheme page
+    .main-inner {
+        margin-left: 160px;
+    }
+}

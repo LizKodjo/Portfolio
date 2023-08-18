@@ -1,0 +1,26 @@
+// Main container
+.main-inner {
+    // Container holding placeholder rows
+    .mt-3 {
+        // Row for placeholders
+        .row {
+            // Column holding images
+            .col-sm-4 {
+                padding-bottom: 15px;
+            }
+            // Placeholder images
+            .img-thumbnail {
+                filter: grayscale(100%);
+            }
+            // Placeholder label
+            .placeholder-title {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-40%, -50%);
+                color: $white;
+            }
+        }
+    }
+}

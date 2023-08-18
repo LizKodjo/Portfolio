@@ -10,6 +10,15 @@ body {
   margin: 0;
 }
 
+.banner-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+  z-index: 1;
+  color: white;
+  transform: translate(50%, -50%);
+}
+
 .container {
   width: 100%;
 }
@@ -48,6 +57,21 @@ body {
     margin-left: 160px;
   }
 }
+.main-inner .mt-3 .row .col-sm-4 {
+  padding-bottom: 15px;
+}
+.main-inner .mt-3 .row .img-thumbnail {
+  filter: grayscale(100%);
+}
+.main-inner .mt-3 .row .placeholder-title {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  color: white;
+}
+
 .sidebar {
   height: 100%;
   width: 160px;
@@ -55,10 +79,21 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: gainsboro;
+  background-color: wheat;
   overflow-x: hidden;
   padding-top: 20px;
   border-right: 2px solid black;
+}
+.sidebar .logo {
+  width: auto;
+  padding-top: 20px;
+}
+.sidebar .logo .nav-dark .initials .eklogo {
+  font-size: 45px;
+  color: black;
+}
+.sidebar .maininfo {
+  font-size: 2rem;
 }
 .sidebar .maininfo a {
   color: black;
@@ -67,23 +102,9 @@ body {
   text-decoration: underline;
 }
 
-.eklogo {
-  font-size: 45px;
-  color: black;
-}
-
-.logo {
-  width: auto;
-  padding-top: 20px;
-}
-
 .initials,
 .maininfo {
   width: auto;
-}
-
-.maininfo {
-  font-size: 2rem;
 }
 
 .main-pic .banner-image .bannerpic {
@@ -97,8 +118,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1;
   color: black;
+  z-index: 1;
 }
 
 .headings {
@@ -106,10 +127,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.2em;
   text-align: center;
-  font-weight: bold;
   color: black;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .formnames {
@@ -117,18 +138,18 @@ body {
 }
 
 .btn-primary {
-  margin-top: 15px;
   background-color: gray;
   border-color: gray;
+  margin-top: 15px;
 }
 
 .main-inner {
-  background-color: gainsboro;
+  background-color: wheat;
   padding: 15px;
 }
 .main-inner .container .col-sm-8 {
   margin-top: 10px;
-  background-color: darkgray;
+  background-color: moccasin;
   padding: 15px;
 }
 .main-inner .container .getintouch {

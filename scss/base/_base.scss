@@ -10,10 +10,11 @@ body {
     margin: 0;
 }
 
-
-
-
-
-
-
-
+.banner-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 50%;
+    z-index: 1;
+    color: white;
+    transform: translate(50%, -50%);
+}

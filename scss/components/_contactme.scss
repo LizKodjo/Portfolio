@@ -3,18 +3,17 @@
 }
 
 .btn-primary {
+    @include btncolor;
     margin-top: 15px;
-    background-color: gray;
-    border-color: gray;
 }
 
 .main-inner {
-    background-color: gainsboro;
+    background-color: $primary-warm-color;
     padding: 15px;
     .container {
         .col-sm-8 {
             margin-top: 10px;
-            background-color: darkgray;
+            background-color: $form-color;
             padding: 15px;
         }
 

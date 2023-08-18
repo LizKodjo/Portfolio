@@ -1,3 +1,4 @@
+// Fixing the sidebar
 .sidebar {
     height: 100%;
     width: 160px;
@@ -5,16 +6,38 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: gainsboro;
+    background-color: $primary-warm-color;
     overflow-x: hidden;
     padding-top: 20px;
-    border-right: 2px solid black;
+    border-right: 2px solid $black;
 
+    // Styling logo
+    .logo {
+        width: auto;
+        padding-top: 20px;
+        
+        // Container holding logo
+        .nav-dark {
+            // Container with logo
+            .initials {
+                .eklogo {
+                    font-size: 45px;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    // Font-size of sidenav links
     .maininfo {
+        font-size: 2rem;
+
+        // Color of sidenav links
         a {
-            color: black;
+            color: $black;
         }
 
+        // Styling hover
         .mainlist {
 
             :hover {
@@ -26,22 +49,7 @@
 }
 
 
-
-.eklogo {
-    font-size: 45px;
-    color: black;
-}
-
-.logo {
-    width: auto;
-    padding-top: 20px;
-}
-
 .initials,
 .maininfo {
     width: auto;
-}
-
-.maininfo {
-    font-size: 2rem;
 }

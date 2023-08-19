@@ -1,11 +1,7 @@
 // Fixing the sidebar
 .sidebar {
-    height: 100%;
+    @include sidenavspec;
     width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
     background-color: $primary-warm-color;
     overflow-x: hidden;
     padding-top: 20px;
@@ -15,13 +11,14 @@
     .logo {
         width: auto;
         padding-top: 20px;
-        
+
         // Container holding logo
         .nav-dark {
+
             // Container with logo
             .initials {
                 .eklogo {
-                    font-size: 45px;
+                    font-size: em(45px);
                     color: $black;
                 }
             }

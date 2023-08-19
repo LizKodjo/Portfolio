@@ -10,15 +10,6 @@ body {
   margin: 0;
 }
 
-.banner-btn {
-  position: absolute;
-  bottom: 8px;
-  right: 50%;
-  z-index: 1;
-  color: white;
-  transform: translate(50%, -50%);
-}
-
 .container {
   width: 100%;
 }
@@ -69,34 +60,34 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-40%, -50%);
-  color: white;
+  color: #fff;
 }
 
 .sidebar {
   height: 100%;
-  width: 160px;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  background-color: wheat;
+  z-index: 1;
+  width: 160px;
+  background-color: #f5d3b3;
   overflow-x: hidden;
   padding-top: 20px;
-  border-right: 2px solid black;
+  border-right: 2px solid #000;
 }
 .sidebar .logo {
   width: auto;
   padding-top: 20px;
 }
 .sidebar .logo .nav-dark .initials .eklogo {
-  font-size: 45px;
-  color: black;
+  font-size: 1.8em;
+  color: #000;
 }
 .sidebar .maininfo {
   font-size: 2rem;
 }
 .sidebar .maininfo a {
-  color: black;
+  color: #000;
 }
 .sidebar .maininfo .mainlist :hover {
   text-decoration: underline;
@@ -118,7 +109,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: black;
+  color: #fff;
   z-index: 1;
 }
 
@@ -128,9 +119,18 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: black;
+  color: #fff;
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.banner-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+  z-index: 1;
+  color: #fff;
+  transform: translate(50%, -50%);
 }
 
 .formnames {
@@ -138,18 +138,18 @@ body {
 }
 
 .btn-primary {
-  background-color: gray;
-  border-color: gray;
+  background-color: #808080;
+  border-color: #808080;
   margin-top: 15px;
 }
 
 .main-inner {
-  background-color: wheat;
+  background-color: #f5d3b3;
   padding: 15px;
 }
 .main-inner .container .col-sm-8 {
   margin-top: 10px;
-  background-color: moccasin;
+  background-color: #ffe4b5;
   padding: 15px;
 }
 .main-inner .container .getintouch {

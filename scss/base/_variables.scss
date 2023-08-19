@@ -10,11 +10,11 @@ $base__font-size                : 25px;
 $base__line                     : 24px;
 
 // Colors
-$primary-warm-color             : wheat;
-$white                          : white;
-$black                          : black;
-$primary-btn-color              : gray;
-$form-color                     : moccasin;
+$primary-warm-color             : #f5d3b3;
+$white                          : #fff;
+$black                          : #000;
+$primary-btn-color              : #808080;
+$form-color                     : #ffe4b5;
 
 
 @if variable-exists(font-url--google) {
@@ -23,19 +23,6 @@ $form-color                     : moccasin;
 
 // Calculate em values
 @function em($target, $context: $base__font-size) {
-    @return ($target / $context) * 1em;
+    @return calc($target / $context) * 1em;
 }
 
-// Mixins
-@mixin btncolor {
-    background-color: $primary-btn-color;
-    border-color: $primary-btn-color;
-}
-@mixin labelpositions {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: $black;
-}

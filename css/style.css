@@ -83,6 +83,9 @@ body {
   font-size: 1.8em;
   color: #000;
 }
+.sidebar .social {
+  padding-top: 30px;
+}
 .sidebar .maininfo {
   font-size: 2rem;
 }

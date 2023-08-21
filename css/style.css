@@ -5,7 +5,7 @@
 
 body {
   font-size: 25px;
-  line-height: 0.96;
+  line-height: 1.6;
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 0;
 }
@@ -16,6 +16,7 @@ body {
 @media (max-width: 576px) {
   .main-inner {
     margin-left: 0;
+    font-size: 0.8em;
   }
   .sidebar,
   .mediumnavbar {
@@ -32,8 +33,15 @@ body {
   }
 }
 @media (min-width: 576px) {
+  .scheme {
+    margin-right: 160px;
+  }
   .smallnavbar {
     display: none;
+  }
+  .main-inner {
+    margin-left: 160px;
+    font-size: 0.8em;
   }
 }
 @media (min-width: 768px) {
@@ -46,6 +54,9 @@ body {
   }
   .main-inner {
     margin-left: 160px;
+  }
+  .scheme {
+    margin-right: 160px;
   }
 }
 .main-inner .mt-3 .row .col-sm-4 {
@@ -134,6 +145,9 @@ body {
   z-index: 1;
   color: #fff;
   transform: translate(50%, -50%);
+}
+.banner-btn a {
+  color: #fff;
 }
 
 .formnames {

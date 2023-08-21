@@ -11,8 +11,11 @@
 }
 
 @media (max-width: 576px) {
+
+
     .main-inner {
         margin-left: 0;
+        font-size: em(20px);
     }
 
     .sidebar,
@@ -44,8 +47,17 @@
 
 
 @media (min-width: 576px) {
+    .scheme {
+        margin-right: 160px;
+    }
+
     .smallnavbar {
         display: none;
+    }
+
+    .main-inner {
+        margin-left: 160px;
+        font-size: em(20px);
     }
 }
 
@@ -64,4 +76,9 @@
     .main-inner {
         margin-left: 160px;
     }
+    .scheme {
+        margin-right: 160px;
+    }
 }
+
+@media (min-width:992px) {}

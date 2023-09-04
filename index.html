@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="typeWriter()">
     <!-- Side nav and main picture -->
     <header>
 
@@ -102,10 +102,10 @@
         <div class="container">
             <div class="headings">
                 <div class="main-heading">
-                    <h1><strong>My name is Elizabeth Kodjo</strong></h1>
+                    <h1 class="demo"></h1>
                 </div>
                 <div class="sub-heading">
-                    <h2>I'm a Web Developer</h2>
+                    <h2 class="demo">I'm a Web Developer</h2>
                 </div>
             </div>
         </div>
@@ -128,29 +128,34 @@
                                     <label for="fname">First Name *:</label>
                                     <input type="text" class="form-control" id="fname" placeholder="First Name*"
                                         name="fname">
-                                    <p id="formValidMsg"></p>
+                                    <p id="firstInValidMsg"></p>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="lname">Last Name *:</label>
                                     <input type="text" class="form-control" id="lname" placeholder="Last Name*"
                                         name="lname">
+                                    <p id="lastInValidMsg"></p>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="email">Email:</label>
                                 <input type="email" class="form-control" id="email" placeholder="Email Address"
                                     name="email">
+                                <p id="emailInValidMsg"></p>
                             </div>
                             <div class="mb-3">
                                 <label for="subject">Phone:</label>
                                 <input type="tel" class="form-control" id="phone" placeholder="Phone number"
                                     name="phone">
+                                <p id="phoneInValidMsg"></p>
                             </div>
                             <div class="mb-3">
                                 <label for="message">Message:</label>
                                 <textarea class="form-control" rows="5" id="message" name="text"></textarea>
+                                <p id="msgInValidMsg"></p>
                             </div>
                             <button type="submit" class="btn btn-primary" onclick="myValidation()">Submit</button>
+                            <p id="submitInValidMsg"></p>
 
                         </div>
                     </form>
@@ -162,7 +167,8 @@
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/portfolio.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

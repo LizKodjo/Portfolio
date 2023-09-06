@@ -1,0 +1,63 @@
+// Tablet
+
+// Hidden navigation
+.tabNavbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color:#111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    // Navigation links
+
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+}
+
+.tabNavbar a:hover {
+    color: #f1f1f1;
+}
+
+// Button to close the navigation panel when it is showing
+
+.tabNavbar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+// The button to open the hidden navigation panel
+.openbtn {
+    position:absolute;
+    z-index: 1;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    top: 15px;
+    right: 15px;
+}
+
+//  Color of button when clicked to open navigation panel
+.openbtn:hover {
+    background-color: #444;
+}
+
+#tabMain {
+    transition: margin-left .5s;
+}

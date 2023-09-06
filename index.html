@@ -58,30 +58,53 @@
             </div>
         </div>
 
-        <!-- Small devices -->
+        <!-- Tablet devices -->
+        <div class="container tabletNavbar">
+            <div id="tabSidebar" class="tabNavbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                <a href="index.html">EK</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="myportfolio.html">My Portfolio</a>
+                <a href="codeexamples.html">Coding Examples</a>
+                <a href="scsscheme.html">SCS Scheme</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+            <div id="tabMain">
+                <button class="openbtn" onclick="openNav()">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile devices -->
         <nav class="navbar navbar-inverse smallnavbar">
+            <!-- Hamburger icon -->
             <div class="container-fluid">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button onclick="openRightMenu()" type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">EK</a>
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">EK</a>
             </div>
 
+            <!-- Menu items -->
             <div class="collapse navbar-collapse" id="myNavbar">
+
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Portfolio</a>
+                        <a class="nav-link" href="myportfolio.html">My Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="#">Coding Examples</a>
+                        <a class="nav-item" href="codeexamples.html">Coding Examples</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">SCS Scheme</a>
+                        <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-item" href="#contact">Contact Me</a>
@@ -102,10 +125,10 @@
         <div class="container">
             <div class="headings">
                 <div class="main-heading">
-                    <h1 class="demo"></h1>
+                    <h1 class="main-title"></h1>
                 </div>
                 <div class="sub-heading">
-                    <h2 class="demo">I'm a Web Developer</h2>
+                    <h2 class="sub-title">I'm an aspiring Web Developer!</h2>
                 </div>
             </div>
         </div>
@@ -121,45 +144,48 @@
                 </div>
                 <!-- Contact Form -->
                 <div class="col-sm-7">
-                    <form>
+                    <form class="form" id="form">
                         <div class="mb-3 mt-3">
                             <div class="row formnames">
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 input-control">
                                     <label for="fname">First Name *:</label>
                                     <input type="text" class="form-control" id="fname" placeholder="First Name*"
                                         name="fname">
-                                    <p id="firstInValidMsg"></p>
+                                    <small class="errorMsg"></small>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 input-control">
                                     <label for="lname">Last Name *:</label>
                                     <input type="text" class="form-control" id="lname" placeholder="Last Name*"
-                                        name="lname">
-                                    <p id="lastInValidMsg"></p>
+                                        name="lname">                
+                                    <small class="errorMsg"></small>
                                 </div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email Address"
+                                <input type="text" class="form-control" id="email" placeholder="Email Address"
                                     name="email">
-                                <p id="emailInValidMsg"></p>
+                                <small class="errorMsg"></small>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="subject">Phone:</label>
                                 <input type="tel" class="form-control" id="phone" placeholder="Phone number"
                                     name="phone">
-                                <p id="phoneInValidMsg"></p>
+                                <small class="errorMsg"></small>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="message">Message:</label>
                                 <textarea class="form-control" rows="5" id="message" name="text"></textarea>
-                                <p id="msgInValidMsg"></p>
+                                <small class="errorMsg"></small>
                             </div>
                             <button type="submit" class="btn btn-primary" onclick="myValidation()">Submit</button>
-                            <p id="submitInValidMsg"></p>
+                            <p class="errorMsg"></p>
 
                         </div>
                     </form>
                 </div>
+            </div>
+            <div class="scrollUpSec">
+                <h3 class="scrollTopBtn"><a href="#">Scroll up</a></h3>
             </div>
         </div>
     </main>

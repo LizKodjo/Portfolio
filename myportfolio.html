@@ -54,6 +54,24 @@
             </div>
         </div>
 
+        <!-- Tablet devices -->
+        <div class="container tabletNavbar">
+            <div id="tabSidebar" class="tabNavbar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+                <a href="index.html">EK</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="myportfolio.html">My Portfolio</a>
+                <a href="codeexamples.html">Coding Examples</a>
+                <a href="scsscheme.html">SCS Scheme</a>
+                <a href="index.html#contact">Contact Me</a>
+            </div>
+            <div id="tabMain">
+                <button class="openbtn" onclick="openNav()">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+        </div>
+
         <!-- Small devices -->
         <nav class="navbar navbar-inverse smallnavbar">
             <div class="container-fluid">
@@ -62,25 +80,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">EK</a>
+                <a class="navbar-brand" href="index.html">EK</a>
             </div>
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link" href="aboutme.html">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="#">Coding Examples</a>
+                        <a class="nav-item" href="codeexamples.html">Coding Examples</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">SCS Scheme</a>
+                        <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-item" href="#">Contact Me</a>
+                        <a class="nav-item" href="index.html#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -159,11 +177,15 @@
                     </div>
                 </div>
             </div>
+            <div class="scrollUpSec">
+                <h3 class="scrollTopBtn"><a href="#">Scroll up</a></h3>
+            </div>
         </div>
     </main>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

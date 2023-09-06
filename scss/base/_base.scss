@@ -10,3 +10,29 @@ body {
     margin: 0;
 }
 
+
+
+.input-control.success input{
+    border-color:#09c372;
+}
+
+.input-control.errorMsg input {
+    border-color: red;
+}
+
+.input-control .errorMsg {
+    color: red;
+    font-size: small;
+}
+
+
+// sliding nav
+.smallnavbar {
+    transition: 0.4s;
+}
+
+
+
+.scrollUpSec {
+    text-align: center;
+}

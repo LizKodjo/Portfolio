@@ -20,8 +20,11 @@ const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMsg');
 
+    // Grab error message from validation
     errorDisplay.innerText = message;
+    // Show error message
     inputControl.classList.add('errorMsg');
+    // Do not show the green input outline
     inputControl.classList.remove('success');
     
 };
@@ -30,22 +33,26 @@ const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMsg');
 
+    // Error message will be blank
     errorDisplay.innerText = '';
+    // Success class will show
     inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+    // Error will be removed.
+    inputControl.classList.remove('errorMsg');
 };
 
 const validateInputs = () => {
 
-    // get the values
+    // get the values and remove whitespace
     const fnameValue = fname.value.trim();
     const lnameValue = lname.value.trim();
     const emailValue = email.value.trim();
     const phoneValue = phone.value.trim();
     const messageValue = message.value.trim();
 
+    // Check the fields
     if (!fnameValue) {
-        // show error
+        // If first name field is blank, show error
         setError(fname, 'Please enter your first name.');
     } else {
         // add success class
@@ -53,29 +60,36 @@ const validateInputs = () => {
     }
 
     if (!lnameValue) {
+        // If last name field is blank, show error
         setError(lname, 'Please enter your last name.');
     } else {
         setSuccess(lname);
     }
     if(!emailValue) {
+        // If email field is blank, show error
         setError(email, 'Please enter an email');
     } else if (!isValidEmail(emailValue)) {
+        // If email is not valid, show error
         setError(email, 'Please enter a valid email');
     } else {
         setSuccess(email);
     }
     if (!phoneValue) {
+        // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
+    } else if (!isValidPhone(phoneValue) || isNaN(phoneValue)) {
+        // If phone number is not valid
+        setError(phone, 'Please enter a valid phone number');
     } else {
         setSuccess(phone);
     }
     if (!messageValue) {
+        // If message field is blank, show error
         setError(message, 'Please enter a message');
     } else {
         setSuccess(message);
     }
-
-}
+};
 
 
 // Function to check validation of email
@@ -84,67 +98,16 @@ function isValidEmail(email) {
      
 }
 
-// Typing section!!!!!
-
-// function myValidation() {
-//     if (!fname) {
-//         warnMsg = "Please enter your first name.";
-//         document.getElementById('firstInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
-
-//     // warnMsg.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-//     // return;
-
-//     if (!lname) {
-//         warnMsg = "Please enter your last name";
-//         document.getElementById('lastInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
+// Function to validate phone number
+function isValidPhone(phone) {
+    return  /\s*\(?(0[1-6]{1}[0-9]{3}\)?[0-9]{6})\s*/;
+}
 
 
 
-//     if (!email || !email.match(/^[A-Za-z][\._\-][0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-//         warnMsg = "Please enter a valid email";
-//         document.getElementById('emailInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
-//     if (!phone || !phone.match(/^\(?(\d{5})\)?[- ]?(\d{6})$/)) {
-//         warnMsg = "Please enter a phone number";
-//         document.getElementById('phoneInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
-//     if (!message) {
-//         warnMsg = "Please leave a short message.";
-//         document.getElementById('msgInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
-//     if (!fname || !lname || !email || !phone || !message) {
-//         warnMsg = "Please complete the form";
-//         document.getElementById('submitInValidMsg').innerHTML = warnMsg;
-//         return;
-//     }
-//     warnMsg.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
-//     return true;
-// }
 
-// Typing effect for headers.
-// var i = 0;
 
-// var txt = 'Elizabeth Kodjo';
-// var txt2 = 'I am an aspiring Web Developer';
-
-// var speed = 50;
-
-// function typeWriter() {
-//     if (i < txt.length) {
-//         document.querySelector('.main-title').innerHTML += txt.charAt(i);
-//         i++;
-//         setTimeout(typeWriter, speed);
-//     }
-// }
-
-// New function
+// New typing function
 const mainTitle = document.querySelector('.main-title');
 const titleText = 'Elizabeth Kodjo';
 
@@ -165,6 +128,8 @@ function typeWriter(element, titleText, i = 0) {
 
 typeWriter(mainTitle, titleText);
 
+
+
 // Sliding nav
 function openRightMenu() {
     document.getElementById('myNavbar').style.display = 'block';
@@ -172,6 +137,8 @@ function openRightMenu() {
 function closeRightMenu() {
     document.getElementById('myNavbar').style.display = 'none';
 }
+
+
 
 // tablet navigation
 function openNav() {
@@ -185,3 +152,4 @@ function closeNav() {
     document.getElementById('tabSidebar').style.width = '0';
     document.getElementsByClassName('.main-inner').style.marginLeft = '0';
 }
+

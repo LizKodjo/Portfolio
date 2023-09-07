@@ -1,0 +1,13 @@
+footer {
+    // container to hold the footer
+    .container {
+        // Using flex to position items on different devices
+        display: flex;
+        // Color of links
+        a {
+            color: $black;
+        }
+    }
+    // Color of footer background
+    background-color: $form-color;
+}

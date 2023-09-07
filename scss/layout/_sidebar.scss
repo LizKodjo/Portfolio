@@ -26,8 +26,15 @@
     }
 
     .social {
+        // Create a gap between the items listed above
         padding-top: 30px;
+        // Colour the social media icons
+        a {
+            color: $black;
+        }
     }
+
+   
 
     // Font-size of sidenav links
     .maininfo {
@@ -43,6 +50,7 @@
 
             :hover {
                 text-decoration: underline;
+                background-color: transparent;
 
             }
         }

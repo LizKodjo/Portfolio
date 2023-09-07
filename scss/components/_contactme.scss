@@ -32,3 +32,26 @@
     }
 }
 
+// Contact form validation 
+
+// input border turns green when filled correctly
+.input-control.success input{
+    border-color: $success;
+}
+
+// input border turns red when blank or invalid data is entered
+.input-control.errorMsg input {
+    border-color: $error;
+}
+
+// Error message shows in red
+.input-control .errorMsg {
+    color: $error;
+    font-size: small;
+}
+
+.btn-primary:hover {
+    color: $black;
+    background-color: $primary-btn-color;
+    border-color: $primary-btn-color;
+}

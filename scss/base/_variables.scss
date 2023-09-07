@@ -10,11 +10,15 @@ $base__font-size                : 25px;
 $base__line                     : 40px;
 
 // Colors
-$primary-warm-color             : #f5d3b3;
+$primary-warm-color             : seashell;
 $white                          : #fff;
 $black                          : #000;
 $primary-btn-color              : #808080;
-$form-color                     : #ffe4b5;
+$form-color                     : lightgrey;
+$success                        : seagreen;
+$error                          : red;
+$footer-color                   : darkgray;
+
 
 
 @if variable-exists(font-url--google) {

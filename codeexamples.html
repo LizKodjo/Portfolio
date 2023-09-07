@@ -120,7 +120,41 @@
             <div class="container scheme">
 
                 <div class="container intro" id="mycode">
-                    <h1>Coming Soon!!!</h1>
+                    <h1>Form Validation</h1>
+                </div>
+                <div class="container code-intro">
+                    <div>
+                        <p>
+                            To help future interested employers, I have added a contact form to my profile page.
+                            The purpose is to help them have an easy way to leave their contact details and any
+                            information
+                            on why they want to get in touch.
+                        </p>
+                        <p>
+                            I used HTML and CSS to create and style the page respectively.
+
+                        </p>
+                        <p>
+                            I used JavaScript to help me record user events and change elements. This included 
+                            ensuring there were no blank fields and customized error
+                            messages popped up when a user left a field blank. It also prevents the user from
+                            submitting an uncompleted form. HTML does have error messages, but I wanted something 
+                            that would explain why the user couldn't submit the form.
+                        </p>
+                        <p>
+                            The code below show a function I created to check the validity of an email address.
+                        </p>
+                    </div>
+                    <div class="container code-sample">
+
+                        <p>
+                        // Function to check validation of email<br>
+                        function isValidEmail(email) {<br>
+                            return /^[A-Za-z][\._\-][0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/.test(String(email).toLowerCase());
+                             
+                        }
+                    </p>
+                    </div>
                 </div>
             </div>
             <div class="scrollUpSec">
@@ -128,9 +162,21 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <div class="container footer-items">
+                <a href="aboutme.html">About Me</a>
+                <a href="myportfolio.html">My Portfolio</a>
+                <a href="codeexamples.html">Coding Examples</a>
+                <a href="scsscheme.html">SCS Scheme</a>
+                <a href="index.html#contact">Contact Me</a>
+            </div>
+        </div>
+    </footer>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -115,43 +115,38 @@ function isValidPhone(phone) {
 
 
 
-function typeWriter() {
 
-    // Use a loop to get the letters of the heading.
-    for (let i = 0; i < 1; i++) {
 
-        // Create an empty array
-        let testArray = [];
-        // Fetch the heading
-        let pageTitle = document.querySelector('.main-title').textContent;
-        // Split the information received into the array
-        testArray = pageTitle.split('');
-        // let testResult = document.querySelector('.type-result');
-        let testResult = [];
-        // List the letters in the console.
+// Use a loop to get the letters of the heading.
+// for (let i = 0; i < 1; i++) {
 
-        pageTitle[i] = testArray.join('');
-        // testArray.text = pageTitle;
-        // testArray[i].textContent = testResult;
-        // console.log(testArray);
+// Create an empty array
+let testArray = [];
+// Fetch the heading
+let pageTitle = document.querySelector('.main-title').textContent;
+// console.log(pageTitle + ' = text from the title');
+// Split the information received into the array
+testArray = pageTitle.split('');
+// console.log(testArray + ' = letter to use later');
+// let testResult = document.querySelector('.type-result');
+let testResult = [];
 
-        for (i = 0; i < testArray.length; i++) {
-            setTimeout(function () {
-                console.log(testArray[i]);
-                testResult.push(testArray[i]);
-                document.querySelector('.type-result').innerText = testResult;
-                // console.log(testResult[i]);
+// Make sure the is at least a letter on the page to keep the box from moving
+document.querySelector('.main-title').innerText = testArray[0];
 
-            }, (i + 1) * 150);
-        }
 
-        // pageTitle = testArray.join('');
-        // pageTitle[i] = document.querySelector('.main-title').textContent;
-    }
+for (let i = 0; i < testArray.length; i++) {
+    // Set time 
+    setTimeout(function () {
+        // console.log(testArray[i] + ' = current letter we are adding to title');
+        // Save the characters in the array to print on screen
+        testResult.push(testArray[i]);
+        document.querySelector('.main-title').innerText = testResult.join('');
+        // console.log(testResult[i]);
+
+    }, (i + 1) * 250);
 }
 
-// typeWriter();
-setTimeout(typeWriter, 500);
 
 
 
@@ -161,32 +156,11 @@ setTimeout(typeWriter, 500);
 
 
 
-// New typing function
-// const mainTitle = document.querySelector('.main-title');
-// const maintTitletext = document.querySelector('.main-title').textContent;
 
 
 
-// function typeWriter(element, titleText) {
-//     console.log('Testing my work')
-// let i = 0;
 
 
-// if (i === 0 ) {
-//     element.textContent = '';
-// }
-
-// element.textContent += titleText[i];
-
-// // End of sentence
-// if (i === titleText.length - 1) {
-//     return;
-// }
-// setTimeout(() => typeWriter(element, titleText, i + 1), 50);
-
-
-
-// typeWriter(mainTitle, titleText);
 
 
 

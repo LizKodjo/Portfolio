@@ -26,10 +26,6 @@ body {
   background-color: #fff;
 }
 
-.main-inner .row .proj-one .card-one {
-  filter: block;
-}
-
 .container {
   width: 100%;
 }
@@ -323,6 +319,9 @@ footer .container a {
   margin: 0;
 }
 
+.main-inner .mt-3 .row .proj-one .card-one {
+  filter: none;
+}
 .main-inner .mt-3 .row .col-sm-4 {
   padding-bottom: 15px;
 }

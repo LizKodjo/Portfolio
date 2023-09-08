@@ -11,11 +11,14 @@ const warnMsg = document.getElementById('errorMsg');
 
 // Prevent submission till validation has been checked.
 
+if (form) {
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    validateInputs();
-});
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        validateInputs();
+    });
+}
+
 
 
 
@@ -110,32 +113,51 @@ function isValidPhone(phone) {
 
 
 
-// Create an empty array
-let testArray = [];
-// Fetch the heading
-let pageTitle = document.querySelector('.main-title').textContent;
-// Split the information received into the array
-testArray = pageTitle.split('');
-
 
 
 function typeWriter() {
 
-
     // Use a loop to get the letters of the heading.
-    for (i = 0; i < 1; i++) {
+    for (let i = 0; i < 1; i++) {
+
+        // Create an empty array
+        let testArray = [];
+        // Fetch the heading
+        let pageTitle = document.querySelector('.main-title').textContent;
+        // Split the information received into the array
+        testArray = pageTitle.split('');
+        // let testResult = document.querySelector('.type-result');
+        let testResult = [];
         // List the letters in the console.
 
         pageTitle[i] = testArray.join('');
-        testArray.text =pageTitle;
-        console.log(testArray);
+        // testArray.text = pageTitle;
+        // testArray[i].textContent = testResult;
+        // console.log(testArray);
+
+        for (i = 0; i < testArray.length; i++) {
+            setTimeout(function () {
+                console.log(testArray[i]);
+                testResult.push(testArray[i]);
+                document.querySelector('.type-result').innerText = testResult;
+                // console.log(testResult[i]);
+
+            }, (i + 1) * 150);
+        }
+
         // pageTitle = testArray.join('');
         // pageTitle[i] = document.querySelector('.main-title').textContent;
-        // setTimeout(typeWriter, 500);
-
     }
 }
-console.log(typeWriter());
+
+// typeWriter();
+setTimeout(typeWriter, 500);
+
+
+
+
+
+
 
 
 

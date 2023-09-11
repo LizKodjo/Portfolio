@@ -45,5 +45,13 @@ body {
     }
 }
 
+// Change link colors from blue to black
+.workLink, 
+.telLink,
+.emailLink {
+    color: $black;
+}
 
-
+.img-thumbnail {
+    height: 190px;
+}

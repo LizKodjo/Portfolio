@@ -33,8 +33,9 @@
     z-index: 1;
     color: $white;
     transform: translate(50%, -50%);
+    scroll-behavior: smooth;
     a {
         color: $white;
-        scroll-behavior: smooth;
+        
     }
 }

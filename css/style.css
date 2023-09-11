@@ -14,12 +14,12 @@ body {
   transition: 0.4s;
 }
 
-.scrollUpSec {
+.scrollUpSec .scrollTopBtn {
   text-align: center;
+  scroll-behavior: smooth;
 }
 .scrollUpSec a {
   color: #000;
-  scroll-behavior: smooth;
 }
 
 .scheme .code-intro .code-sample {
@@ -205,10 +205,10 @@ body {
   z-index: 1;
   color: #fff;
   transform: translate(50%, -50%);
+  scroll-behavior: smooth;
 }
 .banner-btn a {
   color: #fff;
-  scroll-behavior: smooth;
 }
 
 .tabNavbar {

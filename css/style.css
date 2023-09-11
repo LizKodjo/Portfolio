@@ -19,11 +19,15 @@ body {
 }
 .scrollUpSec a {
   color: #000;
+  scroll-behavior: smooth;
 }
 
 .scheme .code-intro .code-sample {
   border: 1px inset #000;
   background-color: #fff;
+}
+.scheme .code-intro .code-sample code.code-exp {
+  font-size: 15px;
 }
 
 .container {
@@ -112,8 +116,7 @@ body {
 }
 @media (min-width: 1200px) {
   footer .container {
-    justify-content: space-between;
-    margin-left: 160px;
+    justify-content: space-evenly;
     width: 1170px;
   }
 }
@@ -195,6 +198,7 @@ body {
 }
 .banner-btn a {
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 .tabNavbar {
@@ -255,6 +259,7 @@ footer {
   background-color: lightgrey;
 }
 footer .container {
+  padding: 15px;
   display: flex;
 }
 footer .container a {

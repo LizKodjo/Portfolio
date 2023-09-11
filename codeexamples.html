@@ -3,11 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Web development skills that Elizabeth Kodjo has">
+    <meta name="author" content="Elizabeth Kodjo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elizabeth Kodjo | Code Examples</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <script src="https://kit.fontawesome.com/f8bda8a3df.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,9 +52,9 @@
                 </ul>
             </div>
             <div class="container social">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
 
             </div>
         </div>
@@ -115,12 +120,11 @@
             </div>
         </div>
 
-         <!-- Headings -->
-         <div class="container">
+        <!-- Headings -->
+        <div class="container">
             <div class="headings">
                 <div class="main-heading">
-                    <h1 class="main-title">Elizabeth Kodjo</h1> 
-                    <h1 class="type-result"></h1>               
+                    <h1 class="main-title">Elizabeth Kodjo</h1>
                 </div>
                 <div class="sub-heading">
                     <h2 class="sub-title">Code Examples</h2>
@@ -133,40 +137,62 @@
             <div class="container scheme">
 
                 <div class="container intro" id="mycode">
-                    <h1>Form Validation</h1>
+                    <h1>Typing Effect</h1>
                 </div>
                 <div class="container code-intro">
                     <div>
                         <p>
-                            To help future interested employers, I have added a contact form to my profile page.
-                            The purpose is to help them have an easy way to leave their contact details and any
-                            information
-                            on why they want to get in touch.
+                            To create a typing effect on the main title that shows on all my pages, I used JavaScript.
+                            Before that, I created the main title, using HTML and CSS.
                         </p>
                         <p>
-                            I used HTML and CSS to create and style the page respectively.
+                            The first step I took was to create an empty array. This would serve as a 'box' to collect
+                            the letters after I had 'split' them up, to get the individual characters.<br>
+                            My next step was to fetch the element storing the main title, using the split() to extract
+                            the characters
+                            which I then stored in the empty array I had created earlier.</p>
+                        <p>Using a 'for' loop, I viewed the characters individually and pushed them into a
+                            second empty array I had created. Adding a timer with the setTimeout(), slowed down when the
+                            characters showed on the screen.
+                        </p>
 
-                        </p>
-                        <p>
-                            I used JavaScript to help me record user events and change elements. This included 
-                            ensuring there were no blank fields and customized error
-                            messages popped up when a user left a field blank. It also prevents the user from
-                            submitting an uncompleted form. HTML does have error messages, but I wanted something 
-                            that would explain why the user couldn't submit the form.
-                        </p>
-                        <p>
-                            The code below show a function I created to check the validity of an email address.
+                        <p>This gives the main heading the typing effect.
+
                         </p>
                     </div>
                     <div class="container code-sample">
+                        <pre>
+        <code class="language-js line-numbers code-exp">
+            // Steps to extract letters, loop and show each character on the page.
 
-                        <p>
-                        // Function to check validation of email<br>
-                        function isValidEmail(email) {<br>
-                            return /^[A-Za-z][\._\-][0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/.test(String(email).toLowerCase());
-                             
-                        }
-                    </p>
+            // Create an empty array
+            let testArray = [];
+            // Fetch the heading
+            let pageTitle = document.querySelector('.main-title').textContent;
+            // console.log(pageTitle + ' = text from the title');
+            // Split the information received into the array
+            testArray = pageTitle.split('');
+            // console.log(testArray + ' = letter to use later');
+            // let testResult = document.querySelector('.type-result');
+            let testResult = [];
+            
+            // Make sure the is at least a letter on the page to keep the box from moving
+            document.querySelector('.main-title').innerText = testArray[0];
+            
+            
+            for (let i = 0; i < testArray.length; i++) {
+                // Set time 
+                setTimeout(function () {
+                    // console.log(testArray[i] + ' = current letter we are adding to title');
+                    // Save the characters in the array to print on screen
+                    testResult.push(testArray[i]);
+                    document.querySelector('.main-title').innerText = testResult.join('');
+                    // console.log(testResult[i]);
+            
+                }, (i + 1) * 250);
+            }
+            </code>                                
+        </pre>
                     </div>
                 </div>
             </div>
@@ -190,6 +216,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>

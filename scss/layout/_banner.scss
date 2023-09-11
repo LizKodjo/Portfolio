@@ -35,5 +35,6 @@
     transform: translate(50%, -50%);
     a {
         color: $white;
+        scroll-behavior: smooth;
     }
 }

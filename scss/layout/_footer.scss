@@ -1,6 +1,8 @@
 footer {
     // container to hold the footer
     .container {
+        // Adding padding to the footer
+        padding: 15px;
         // Using flex to position items on different devices
         display: flex;
         // Color of links

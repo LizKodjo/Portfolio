@@ -118,7 +118,6 @@ function isValidPhone(phone) {
 
 
 // Use a loop to get the letters of the heading.
-// for (let i = 0; i < 1; i++) {
 
 // Create an empty array
 let testArray = [];

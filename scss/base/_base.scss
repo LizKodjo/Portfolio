@@ -25,15 +25,22 @@ body {
     text-align: center;
 
     a {
+        // Styling the appearance and behaviour of button
         color: $black;
+        scroll-behavior: smooth;
     }
 }
 
 .scheme {
     .code-intro {
         .code-sample {
+            // Styling box background
             border: 1px inset $black;
             background-color: $white;
+            // code snippet font-size to keep it in the box
+            code.code-exp {
+                font-size: 15px;
+            }
         }
     }
 }

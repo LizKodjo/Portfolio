@@ -111,6 +111,9 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .scrollTopBtn {
+    margin-left: -120px;
+  }
   footer .container {
     width: 950px;
     justify-content: space-around;

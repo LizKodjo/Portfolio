@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -61,6 +61,14 @@ html {
 
 .card-text {
   font-size: 18px;
+}
+
+.main-title {
+  text-shadow: 1px 1px 5px black;
+}
+
+.sub-title {
+  text-shadow: 0 0 5px black;
 }
 
 .container {

@@ -6,7 +6,7 @@
 .codebtn {
     @include btncolor;
     margin-top: 15px;
-    .active {
+    :active {
         background-color: $primary-btn-color;
     }
 }

@@ -336,8 +336,8 @@ footer .container a {
   border-color: #808080;
   margin-top: 15px;
 }
-.btn-primary .active,
-.codebtn .active {
+.btn-primary :active,
+.codebtn :active {
   background-color: #808080;
 }
 

@@ -143,7 +143,7 @@ for (let i = 0; i < testArray.length; i++) {
         document.querySelector('.main-title').innerText = testResult.join('');
         // console.log(testResult[i]);
 
-    }, (i + 1) * 250);
+    }, (i + 1) * 100);
 }
 
 

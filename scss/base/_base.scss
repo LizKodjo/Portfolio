@@ -24,12 +24,11 @@ body {
 .scrollUpSec {
     .scrollTopBtn {
         text-align: center;
-        scroll-behavior: smooth;
     }
 
     a {
         // Styling the appearance and behaviour of button
-        color: $black;        
+        color: $black;       
     }
 }
 
@@ -57,4 +56,30 @@ body {
 
 .img-thumbnail {
     height: 190px;
+}
+
+// Trying something
+
+.banner-image {
+    background-image: linear-gradient(45deg, lavender, gray, transparent);
+}
+
+footer {
+    display: none;
+}
+
+.img-thumbnail {
+     width: 80%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-title {
+    font-size: 20px;
+}
+.card-text {
+    font-size: 18px;
 }

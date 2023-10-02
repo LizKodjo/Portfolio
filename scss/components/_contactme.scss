@@ -2,9 +2,13 @@
     margin: 0 -15px;
 }
 
-.btn-primary {
+.btn-primary,
+.codebtn {
     @include btncolor;
     margin-top: 15px;
+    .active {
+        background-color: $primary-btn-color;
+    }
 }
 
 .main-inner {

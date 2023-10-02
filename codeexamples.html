@@ -116,7 +116,8 @@
             <div class="banner-image">
                 <!-- <h1 class="banner-title">Code Examples</h1> -->
                 <h3 class="banner-btn"><a href="#mycode">Scroll down</a></h3>
-                <img class="bannerpic" src="img/pexels-ache-surya-16110773.jpg" alt="Seaside!">
+                <!-- <img class="bannerpic" src="img/pexels-ache-surya-16110773.jpg" alt="Seaside!"> -->
+                <img class="bannerpic">
             </div>
         </div>
 
@@ -137,9 +138,13 @@
             <div class="container scheme">
 
                 <div class="container intro" id="mycode">
+
                     <h1>Typing Effect</h1>
+
                 </div>
-                <div class="container code-intro">
+
+                <button class="accordion">View More...</button>
+                <div class="container panel code-intro">
                     <div>
                         <p>
                             To create a typing effect on the main title that shows on all my pages, I used JavaScript.
@@ -195,7 +200,66 @@
         </pre>
                     </div>
                 </div>
+
+                <div class="container intro" id="colorMap">
+                    <h1>Color Map</h1>
+                </div>
+                <button class="accordion">View More...</button>
+                <div class="container panel code-intro">
+                    <div>
+                        <p>
+                            Whilst recreating the Netmatters website, I noticed there were a 
+                            lot of standard colors which were used on almost every page.
+                        </p>
+                        <p>
+                            During my studies, I remembered a lesson that taught how to
+                            use a 'map' to create different and frequently used color shades to 
+                            help the developers work get a bit easier instead of always having to 
+                            remember the name of a color.
+                        </p> 
+                        <p>
+                            I already had my colors saved as variables, named after the 
+                            departments of the company and simply mapped them and 
+                            created a mixin, which takes each color and would 
+                            assign it as the background-color of any button it is prepened to. 
+                        </p>                       
+                    </div>
+                    <div class="container code-sample">
+    <pre>
+    <code class="language-js line-numbers code-exp">
+        // Main colors
+            $section-colors: (
+                bespoke : $bespoke,
+                digital : $digital-market,
+                it-support : $it-support,
+                telecoms : $telecoms,
+                web : $web-design,
+                cyber : $cyber,
+                developer : $developer,
+                consent: $consent,
+                consent-change: $consent-change
+            );
+
+            // mixin for colors
+            @mixin bg-colors($map) {
+                @each $theme, $color in $map {
+                    &--#{$theme} {
+                        background-color: $color;
+                    }
+                }
+            }
+            
+            //To use this with the btn element
+            .btn {
+                @include bg-colors($section-colors);
+            }
+    </code>
+</pre>
+                    </div>
+                </div>
+
             </div>
+
             <div class="scrollUpSec">
                 <h3 class="scrollTopBtn"><a href="#">Scroll up</a></h3>
             </div>
@@ -217,6 +281,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/prism.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 
 </html>

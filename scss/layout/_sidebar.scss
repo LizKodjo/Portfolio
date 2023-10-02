@@ -1,7 +1,7 @@
 // Fixing the sidebar
 .sidebar {
     @include sidenavspec;
-    width: 160px;
+    width: 250px;
     background-color: $primary-warm-color;
     overflow-x: hidden;
     padding-top: 20px;

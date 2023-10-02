@@ -80,6 +80,10 @@ body {
   }
 }
 @media (min-width: 576px) {
+  footer {
+    font-size: 20px;
+    justify-content: space-between;
+  }
   .scheme {
     margin-right: 160px;
   }
@@ -93,7 +97,7 @@ body {
 @media (min-width: 768px) {
   footer .container {
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 20px;
   }
   .smallnavbar {
     display: none;

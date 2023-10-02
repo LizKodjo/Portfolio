@@ -14,7 +14,7 @@
 
     .scheme {
         .code-intro {
-            .code-sample {                
+            .code-sample {
                 font-size: 15px;
             }
         }
@@ -75,6 +75,12 @@
 
 
 @media (min-width: 576px) {
+
+    footer {
+        font-size: 20px;
+        justify-content: space-between;
+    }
+
     .scheme {
         margin-right: 160px;
     }
@@ -94,7 +100,7 @@
     footer {
         .container {
             justify-content: space-between;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 
@@ -133,9 +139,9 @@
 }
 
 @media (min-width:992px) {
-   .scrollTopBtn {
-    margin-left: -120px;
-   }
+    .scrollTopBtn {
+        margin-left: -120px;
+    }
 
     footer {
         .container {
@@ -144,6 +150,7 @@
             padding-left: 30px;
         }
     }
+
     .tabletNavbar {
         display: none;
     }
@@ -163,4 +170,3 @@
         }
     }
 }
-

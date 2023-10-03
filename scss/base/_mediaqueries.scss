@@ -12,6 +12,10 @@
 
 @media (max-width: 576px) {
 
+    .headings {
+        transform: translate(-50%, -50%);
+    }
+
     .scheme {
         .code-intro {
             .code-sample {
@@ -76,6 +80,10 @@
 
 @media (min-width: 576px) {
 
+    .headings {
+        transform: translate(-50%, -50%);
+    }
+
     footer {
         font-size: 20px;
         justify-content: space-between;
@@ -96,6 +104,10 @@
 }
 
 @media (min-width:768px) {
+
+    .headings {
+        transform: translate(-50%, -50%);
+    }
 
     footer {
         .container {
@@ -139,6 +151,13 @@
 }
 
 @media (min-width:992px) {
+
+    .headings {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        transform: translate(-25%, -50%);
+    }
     .scrollTopBtn {
         margin-left: -120px;
     }

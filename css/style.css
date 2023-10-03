@@ -76,6 +76,9 @@ html {
   width: 100%;
 }
 @media (max-width: 576px) {
+  .headings {
+    transform: translate(-50%, -50%);
+  }
   .scheme .code-intro .code-sample {
     font-size: 15px;
   }
@@ -112,6 +115,9 @@ html {
   }
 }
 @media (min-width: 576px) {
+  .headings {
+    transform: translate(-50%, -50%);
+  }
   footer {
     font-size: 20px;
     justify-content: space-between;
@@ -127,6 +133,9 @@ html {
   }
 }
 @media (min-width: 768px) {
+  .headings {
+    transform: translate(-50%, -50%);
+  }
   footer .container {
     justify-content: space-between;
     font-size: 20px;
@@ -147,6 +156,9 @@ html {
   }
 }
 @media (min-width: 992px) {
+  .headings {
+    transform: translate(-25%, -50%);
+  }
   .scrollTopBtn {
     margin-left: -120px;
   }
@@ -226,7 +238,6 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   z-index: 1;
@@ -236,7 +247,6 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   font-size: 1.2em;

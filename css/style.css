@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 0;
+  color: white;
 }
 
 .smallnavbar {
@@ -32,7 +33,7 @@ body {
 .workLink,
 .telLink,
 .emailLink {
-  color: #000;
+  color: #fff;
 }
 
 .img-thumbnail {
@@ -40,7 +41,7 @@ body {
 }
 
 .banner-image {
-  background-image: linear-gradient(45deg, lavender, gray, transparent);
+  background-image: linear-gradient(45deg, black, lightseagreen, black);
 }
 
 footer {
@@ -175,18 +176,20 @@ html {
   left: 0;
   z-index: 1;
   width: 250px;
-  background-color: seashell;
+  background-color: #000;
   overflow-x: hidden;
   padding-top: 20px;
-  border-right: 2px solid #000;
+  border-right: 3px solid lightseagreen;
 }
 .sidebar .logo {
   width: auto;
   padding-top: 20px;
+  border-bottom-style: inset;
+  border-bottom-color: lightseagreen;
 }
 .sidebar .logo .nav-dark .initials .eklogo {
   font-size: 1.8em;
-  color: #000;
+  color: #fff;
 }
 .sidebar .social {
   padding-top: 30px;
@@ -196,9 +199,13 @@ html {
 }
 .sidebar .maininfo {
   font-size: 2rem;
+  margin-top: 30px 0;
+  padding-bottom: 30px;
+  border-bottom-color: lightseagreen;
+  border-bottom-style: inset;
 }
 .sidebar .maininfo a {
-  color: #000;
+  color: #fff;
 }
 .sidebar .maininfo .mainlist :hover {
   text-decoration: underline;
@@ -350,12 +357,15 @@ footer .container a {
 }
 
 .main-inner {
-  background-color: seashell;
+  background-color: #000;
   padding: 15px;
+  border-top-color: lightseagreen;
+  border-top-style: inset;
+  border-top-width: 3px;
 }
 .main-inner .container .col-sm-7 {
   margin-top: 10px;
-  background-color: lightgrey;
+  background-color: lightseagreen;
   padding: 15px;
 }
 .main-inner .container .getintouch {

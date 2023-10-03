@@ -12,12 +12,15 @@
 }
 
 .main-inner {
-    background-color: $primary-warm-color;
+    background-color: $black;
     padding: 15px;
+    border-top-color: lightseagreen;
+    border-top-style:inset;
+    border-top-width: 3px;
     .container {
         .col-sm-7 {
             margin-top: 10px;
-            background-color: $form-color;
+            background-color: lightseagreen;
             padding: 15px;
         }
 

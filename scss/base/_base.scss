@@ -8,6 +8,7 @@ body {
     line-height: calc($base__line / $base__font-size);
     font-family: $font-family--primary;
     margin: 0;
+    color: white;
 }
 
 
@@ -51,7 +52,7 @@ body {
 .workLink,
 .telLink,
 .emailLink {
-    color: $black;
+    color: $white;
 }
 
 .img-thumbnail {
@@ -61,7 +62,7 @@ body {
 // Trying something
 
 .banner-image {
-    background-image: linear-gradient(45deg, lavender, gray, transparent);
+    background-image: linear-gradient(45deg, black, lightseagreen, black);
 }
 
 footer {

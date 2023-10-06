@@ -8,18 +8,11 @@ body {
   line-height: 1.6;
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 0;
-  color: white;
+  color: #fff;
 }
 
 .smallnavbar {
   transition: 0.4s;
-}
-
-.scrollUpSec .scrollTopBtn {
-  text-align: center;
-}
-.scrollUpSec a {
-  color: #000;
 }
 
 .scheme .code-intro .code-sample {
@@ -56,14 +49,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.card-title {
-  font-size: 20px;
-}
-
-.card-text {
-  font-size: 18px;
-}
-
 .main-title {
   text-shadow: 1px 1px 5px black;
 }
@@ -72,10 +57,17 @@ html {
   text-shadow: 0 0 5px black;
 }
 
+.scrollTopBtn {
+  text-align: center;
+}
+
 .container {
   width: 100%;
 }
 @media (max-width: 576px) {
+  .banner-btn {
+    transform: translate(50%, -50%);
+  }
   .headings {
     transform: translate(-50%, -50%);
   }
@@ -133,6 +125,9 @@ html {
   }
 }
 @media (min-width: 768px) {
+  .banner-btn {
+    transform: translate(50%, -50%);
+  }
   .headings {
     transform: translate(-50%, -50%);
   }
@@ -159,8 +154,8 @@ html {
   .headings {
     transform: translate(-25%, -50%);
   }
-  .scrollTopBtn {
-    margin-left: -120px;
+  .banner-btn {
+    transform: translate(125%, -50%);
   }
   footer .container {
     width: 950px;
@@ -259,10 +254,12 @@ html {
   right: 50%;
   z-index: 1;
   color: #fff;
-  transform: translate(50%, -50%);
-  scroll-behavior: smooth;
 }
 .banner-btn a {
+  color: #fff;
+}
+
+.scrollUpSec a {
   color: #fff;
 }
 
@@ -331,24 +328,26 @@ footer .container a {
   color: #000;
 }
 
-.accordion {
+.collapsed {
   background-color: lightseagreen;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 80%;
-  text-align: center;
-  border: none;
-  outline: none;
-  transition: 0.9s;
 }
 
-.panel {
-  padding: 0 18px;
-  background-color: snow;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.btn-info {
+  background-color: lightseagreen;
+  text-align: center;
+  align-items: center;
+}
+.btn-info:hover, .btn-info:focus {
+  background-color: #188781;
+  border-color: #188781;
+}
+.btn-info:active {
+  background-color: lightseagreen;
+  border-color: lightseagreen;
+}
+.btn-info:active:hover {
+  background-color: lightseagreen;
+  border-color: lightseagreen;
 }
 
 .formnames {
@@ -357,8 +356,8 @@ footer .container a {
 
 .btn-primary,
 .codebtn {
-  background-color: #808080;
-  border-color: #808080;
+  background-color: lightseagreen;
+  border-color: lightseagreen;
   margin-top: 15px;
 }
 .btn-primary :active,
@@ -403,10 +402,14 @@ footer .container a {
   font-size: small;
 }
 
-.btn-primary:hover {
+.submitbtn:hover {
   color: #000;
   background-color: #808080;
   border-color: #808080;
+}
+
+.submitbtn {
+  background-color: #1a1a1a;
 }
 
 .main-inner .row .netmatters :hover {
@@ -417,7 +420,13 @@ footer .container a {
   margin: 0;
 }
 
+.main-inner .mt-3 .row {
+  text-align: center;
+}
 .main-inner .mt-3 .row .proj-one .card-one {
+  filter: none;
+}
+.main-inner .mt-3 .row .proj-two .card-two {
   filter: none;
 }
 .main-inner .mt-3 .row .col-sm-4 {
@@ -433,6 +442,19 @@ footer .container a {
   left: 50%;
   transform: translate(-40%, -200%);
   color: #fff;
+}
+
+.card-title {
+  font-size: 20px;
+  color: lightseagreen;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.sample-intro {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

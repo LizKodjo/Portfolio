@@ -4,9 +4,16 @@
     .mt-3 {
         // Row for placeholders
         .row {
+            text-align: center;
             .proj-one {
                 .card-one {
                     filter: none;
+                }                
+            }
+
+            .proj-two {
+                .card-two {
+                    filter:none;
                 }
             }
             // Column holding images
@@ -28,4 +35,12 @@
             }
         }
     }
+}
+
+.card-title {
+    font-size: 20px;
+    color: lightseagreen
+}
+.card-text {
+    font-size: 18px;
 }

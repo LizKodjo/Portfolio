@@ -8,7 +8,7 @@ body {
     line-height: calc($base__line / $base__font-size);
     font-family: $font-family--primary;
     margin: 0;
-    color: white;
+    color: $white;
 }
 
 
@@ -21,17 +21,7 @@ body {
 }
 
 
-// Button to help user scroll to the top of the page
-.scrollUpSec {
-    .scrollTopBtn {
-        text-align: center;
-    }
 
-    a {
-        // Styling the appearance and behaviour of button
-        color: $black;       
-    }
-}
 
 .scheme {
     .code-intro {
@@ -78,12 +68,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.card-title {
-    font-size: 20px;
-}
-.card-text {
-    font-size: 18px;
-}
+
 
 .main-title {
     text-shadow: 1px 1px 5px black;
@@ -91,4 +76,16 @@ html {
 
 .sub-title {
     text-shadow: 0 0 5px black;
+}
+
+// .scrollUpSec {
+//     position: absolute;
+//     bottom: 8px;
+//     right: 50%;
+//     z-index: 1;
+//     transform: translate(-50%, -50%);
+// }
+
+.scrollTopBtn {
+    text-align: center;
 }

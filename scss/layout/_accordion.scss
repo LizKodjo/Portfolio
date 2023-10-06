@@ -1,19 +1,26 @@
-.accordion {
+// Accordion button and background styling.
+
+.collapsed {
     background-color: lightseagreen;
-    color: #444;
-    cursor:pointer;
-    padding: 18px;
-    width: 80%;
-    text-align: center;
-    border: none;
-    outline: none;
-    transition: 0.9s;
 }
 
-.panel {
-    padding: 0 18px;
-    background-color: snow;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+.btn-info {
+    background-color: lightseagreen;
+    text-align: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+        background-color: darken(lightseagreen, 10);
+        border-color: darken(lightseagreen, 10);
+    }
+
+    &:active {
+        @include btncolor;
+    }
+
+    &:active:hover {
+        @include btncolor;
+    }
+    
 }

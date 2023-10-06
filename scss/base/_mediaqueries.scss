@@ -12,6 +12,10 @@
 
 @media (max-width: 576px) {
 
+    .banner-btn {
+        transform: translate(50%, -50%);
+    }
+
     .headings {
         transform: translate(-50%, -50%);
     }
@@ -105,6 +109,10 @@
 
 @media (min-width:768px) {
 
+    .banner-btn {
+        transform: translate(50%, -50%);
+    }
+
     .headings {
         transform: translate(-50%, -50%);
     }
@@ -117,20 +125,10 @@
     }
 
 
-
-
     .smallnavbar {
         display: none;
     }
-
-    // .banner-image {
-    //     margin-left: 160px;
-    // }
-
-    // Scheme page
-    // .main-inner {
-    //     margin-left: 160px;
-    // }
+  
     .scheme {
         margin-right: 160px;
     }
@@ -158,9 +156,13 @@
         // left: 50%;
         transform: translate(-25%, -50%);
     }
-    .scrollTopBtn {
-        margin-left: -120px;
+
+    .banner-btn {
+        transform: translate(125%, -50%);
     }
+    // .scrollTopBtn {
+    //     margin-left: -120px;
+    // }
 
     footer {
         .container {

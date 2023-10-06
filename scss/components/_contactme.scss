@@ -57,8 +57,12 @@
     font-size: small;
 }
 
-.btn-primary:hover {
+.submitbtn:hover {
     color: $black;
     background-color: $primary-btn-color;
     border-color: $primary-btn-color;
+}
+
+.submitbtn {
+    background-color: lighten($black, 10);
 }

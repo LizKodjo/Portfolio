@@ -135,16 +135,17 @@
 
         <div class="main-inner">
             <!-- Code Examples -->
-            <div class="container scheme">
+            <div class="container sample-intro">
 
-                <div class="container intro" id="mycode">
+                <!-- <div class="container intro" id="mycode"> -->
 
-                    <h1>Typing Effect</h1>
+                <h1 class="code-title">Typing Effect</h1>
 
-                </div>
+                <!-- </div> -->
 
-                <button class="accordion">View More...</button>
-                <div class="container panel code-intro">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#code-intro">View
+                    More...</button>
+                <div id="code-intro" class="collapse in">
                     <div>
                         <p>
                             To create a typing effect on the main title that shows on all my pages, I used JavaScript.
@@ -201,31 +202,32 @@
                     </div>
                 </div>
 
-                <div class="container intro" id="colorMap">
-                    <h1>Color Map</h1>
-                </div>
-                <button class="accordion">View More...</button>
-                <div class="container panel code-intro">
+                <!-- <div class="container intro" id="colorMap"> -->
+                <h1 class="code-title">Color Map</h1>
+                <!-- </div> -->
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#code-intro1">View
+                    More...</button>
+                <div id="code-intro1" class="collapse in">
                     <div>
                         <p>
-                            Whilst recreating the Netmatters website, I noticed there were a 
+                            Whilst recreating the Netmatters website, I noticed there were a
                             lot of standard colors which were used on almost every page.
                         </p>
                         <p>
                             During my studies, I remembered a lesson that taught how to
-                            use a 'map' to create different and frequently used color shades to 
-                            help the developers work get a bit easier instead of always having to 
+                            use a 'map' to create different and frequently used color shades to
+                            help the developers work get a bit easier instead of always having to
                             remember the name of a color.
-                        </p> 
+                        </p>
                         <p>
-                            I already had my colors saved as variables, named after the 
-                            departments of the company and simply mapped them and 
-                            created a mixin, which takes each color and would 
-                            assign it as the background-color of any button it is prepened to. 
-                        </p>                       
+                            I already had my colors saved as variables, named after the
+                            departments of the company and simply mapped them and
+                            created a mixin, which takes each color and would
+                            assign it as the background-color of any button it is prepened to.
+                        </p>
                     </div>
                     <div class="container code-sample">
-    <pre>
+                        <pre>
     <code class="language-js line-numbers code-exp">
         // Main colors
             $section-colors: (

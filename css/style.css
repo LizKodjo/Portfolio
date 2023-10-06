@@ -15,14 +15,6 @@ body {
   transition: 0.4s;
 }
 
-.scheme .code-intro .code-sample {
-  border: 1px inset #000;
-  background-color: #fff;
-}
-.scheme .code-intro .code-sample code.code-exp {
-  font-size: 15px;
-}
-
 .workLink,
 .telLink,
 .emailLink {

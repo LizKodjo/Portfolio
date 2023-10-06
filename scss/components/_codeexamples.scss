@@ -1,3 +1,8 @@
 .sample-intro {
     text-align: center;
 }
+
+ // Adding shadow to titles
+ h1.code-title {
+    text-shadow: 1px 1px 5px lightseagreen;
+}

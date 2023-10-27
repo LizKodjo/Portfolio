@@ -70,6 +70,10 @@ html {
   text-align: center;
 }
 
+.treehouseURL {
+  font-size: medium;
+}
+
 .container {
   width: 100%;
 }

@@ -41,7 +41,7 @@
 
 // The button to open the hidden navigation panel
 .openbtn {
-    position:absolute;
+    position: fixed;
     z-index: 1;
     font-size: 40px;
     cursor: pointer;

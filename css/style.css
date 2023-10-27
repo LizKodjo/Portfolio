@@ -53,6 +53,23 @@ html {
   text-align: center;
 }
 
+.navbar-collapse {
+  overflow-x: hidden;
+}
+
+.fa-brands {
+  color: white;
+  font-size: 35px;
+}
+
+.card {
+  margin: 20px 0;
+}
+
+.social {
+  text-align: center;
+}
+
 .container {
   width: 100%;
 }
@@ -289,7 +306,7 @@ html {
 }
 
 .openbtn {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   font-size: 40px;
   cursor: pointer;
@@ -450,6 +467,10 @@ footer .container a {
 
 .sample-intro {
   text-align: center;
+}
+
+h1.code-title {
+  text-shadow: 1px 1px 5px lightseagreen;
 }
 
 /*# sourceMappingURL=style.css.map */

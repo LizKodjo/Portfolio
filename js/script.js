@@ -20,9 +20,6 @@ if (form) {
 }
 
 
-
-
-
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMsg');
@@ -111,12 +108,6 @@ function isValidPhone(phone) {
 }
 
 
-
-
-
-
-
-
 // Use a loop to get the letters of the heading.
 
 // Create an empty array
@@ -145,21 +136,6 @@ for (let i = 0; i < testArray.length; i++) {
 
     }, (i + 1) * 100);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

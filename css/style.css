@@ -15,6 +15,10 @@ body {
   transition: 0.4s;
 }
 
+#contact {
+  margin-top: 20px;
+}
+
 .workLink,
 .telLink,
 .emailLink {
@@ -23,6 +27,7 @@ body {
 
 .img-thumbnail {
   height: 190px;
+  width: 190px;
 }
 
 .banner-image {
@@ -31,10 +36,6 @@ body {
 
 footer {
   display: none;
-}
-
-.img-thumbnail {
-  width: 200px;
 }
 
 html {
@@ -63,7 +64,10 @@ html {
 }
 
 .card {
-  margin: 20px 0;
+  box-shadow: 2px 2px 5px lightseagreen;
+  height: 445px;
+  padding: 15px 15px 0;
+  margin: 15px;
 }
 
 .social {
@@ -367,14 +371,12 @@ footer .container a {
   margin: 0 -15px;
 }
 
-.btn-primary,
-.codebtn {
+.btn-primary {
   background-color: lightseagreen;
   border-color: lightseagreen;
   margin-top: 15px;
 }
-.btn-primary :active,
-.codebtn :active {
+.btn-primary :active {
   background-color: #808080;
 }
 
@@ -418,7 +420,9 @@ footer .container a {
   font-size: small;
 }
 
-.submitbtn:hover {
+.submitbtn:hover,
+.submitbtn:active,
+.submitbtn:active:hover {
   color: #000;
   background-color: #808080;
   border-color: #808080;
@@ -426,6 +430,11 @@ footer .container a {
 
 .submitbtn {
   background-color: #1a1a1a;
+}
+
+.projBtn:hover,
+.codeBtn {
+  background-color: #188781;
 }
 
 .main-inner .row .netmatters :hover {
@@ -438,6 +447,9 @@ footer .container a {
 
 .main-inner .mt-3 .row {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .main-inner .mt-3 .row .proj-one .card-one {
   filter: none;

@@ -2,10 +2,10 @@
     margin: 0 -15px;
 }
 
-.btn-primary,
-.codebtn {
+.btn-primary {
     @include btncolor;
     margin-top: 15px;
+
     :active {
         background-color: $primary-btn-color;
     }
@@ -15,14 +15,16 @@
     background-color: $black;
     padding: 15px;
     border-top-color: lightseagreen;
-    border-top-style:inset;
+    border-top-style: inset;
     border-top-width: 3px;
+
     .container {
         .col-sm-7 {
             margin-top: 10px;
             background-color: lightseagreen;
             padding: 15px;
         }
+
         #form {
             .mt-3 {
                 .formnames {
@@ -33,7 +35,7 @@
 
         .getintouch {
             text-align: left;
-            display:flex;
+            display: flex;
             flex-direction: column;
             align-items: flex-start;
             align-content: flex-end;
@@ -49,7 +51,7 @@
 // Contact form validation 
 
 // input border turns green when filled correctly
-.input-control.success input{
+.input-control.success input {
     border-color: $success;
 }
 
@@ -64,7 +66,9 @@
     font-size: small;
 }
 
-.submitbtn:hover {
+.submitbtn:hover,
+.submitbtn:active,
+.submitbtn:active:hover {
     color: $black;
     background-color: $primary-btn-color;
     border-color: $primary-btn-color;
@@ -74,3 +78,8 @@
     background-color: lighten($black, 10);
 }
 
+.projBtn:hover,
+.codeBtn {
+    background-color: darken(lightseagreen, 10);
+
+}

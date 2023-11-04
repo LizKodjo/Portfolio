@@ -33,6 +33,10 @@ body {
 .emailLink {
     color: $white;
 }
+.telLink:hover, .telLink:focus,
+.emailLink:hover, .emailLink:focus {
+    color: lightseagreen;
+}
 
 .img-thumbnail {
     height: 190px;

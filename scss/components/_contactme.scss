@@ -78,8 +78,8 @@
     background-color: lighten($black, 10);
 }
 
-.projBtn:hover,
-.codeBtn {
+.projBtn:hover, .projBtn:active, .projBtn:active:hover,
+.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover {
     background-color: darken(lightseagreen, 10);
-
+    border-color: darken(lightseagreen, 10);
 }

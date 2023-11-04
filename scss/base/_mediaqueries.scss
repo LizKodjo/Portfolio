@@ -11,6 +11,15 @@
 }
 
 @media (max-width: 576px) {
+
+    .projects {
+        .myProjects {
+            .proj-three,
+            .proj-four {
+                padding: 15px 70px 0;
+            }
+        }
+    }
    
 
     .banner-btn {

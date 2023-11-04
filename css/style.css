@@ -25,6 +25,11 @@ body {
   color: #fff;
 }
 
+.telLink:hover, .telLink:focus,
+.emailLink:hover, .emailLink:focus {
+  color: lightseagreen;
+}
+
 .img-thumbnail {
   height: 190px;
   width: 190px;
@@ -82,6 +87,10 @@ html {
   width: 100%;
 }
 @media (max-width: 576px) {
+  .projects .myProjects .proj-three,
+  .projects .myProjects .proj-four {
+    padding: 15px 70px 0;
+  }
   .banner-btn {
     transform: translate(50%, -50%);
   }
@@ -432,9 +441,10 @@ footer .container a {
   background-color: #1a1a1a;
 }
 
-.projBtn:hover,
-.codeBtn {
+.projBtn:hover, .projBtn:active, .projBtn:active:hover,
+.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover {
   background-color: #188781;
+  border-color: #188781;
 }
 
 .main-inner .row .netmatters :hover {
@@ -445,25 +455,25 @@ footer .container a {
   margin: 0;
 }
 
-.main-inner .mt-3 .row {
+.main-inner .mt-3 .myProjects {
   text-align: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.main-inner .mt-3 .row .proj-one .card-one {
+.main-inner .mt-3 .myProjects .proj-one .card-one {
   filter: none;
 }
-.main-inner .mt-3 .row .proj-two .card-two {
+.main-inner .mt-3 .myProjects .proj-two .card-two {
   filter: none;
 }
-.main-inner .mt-3 .row .col-sm-4 {
+.main-inner .mt-3 .myProjects .col-sm-4 {
   padding-bottom: 15px;
 }
-.main-inner .mt-3 .row .img-thumbnail {
+.main-inner .mt-3 .myProjects .img-thumbnail {
   filter: grayscale(100%);
 }
-.main-inner .mt-3 .row .placeholder-title {
+.main-inner .mt-3 .myProjects .placeholder-title {
   position: absolute;
   z-index: 1;
   top: 50%;

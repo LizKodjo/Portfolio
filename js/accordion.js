@@ -20,18 +20,18 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-// $("#code-intro").on("hide.bs.collapse", function() {
-//     $("#code-intro").html('View More...');
-// })
+$("#code-intro").on("hide.bs.collapse", function() {
+    $(".codeEg").html('View More...');
+})
 
-// $("#code-intro").on("show.bs.collapse", function() {
-//     $("#code-intro").html('View Less...');
-// })
+$("#code-intro").on("show.bs.collapse", function() {
+    $(".codeEg").html('View Less...');
+})
 
-// $("#code-intro1").on("hide.bs.collapse", function() {
-//     $(".btn").html('View More...');
-// })
+$("#code-intro1").on("hide.bs.collapse", function() {
+    $(".codeIntro1").html('View More...');
+})
 
-// $("#code-intro1").on("show.bs.collapse", function() {
-//     $(".btn").html('View Less...');
-// })
+$("#code-intro1").on("show.bs.collapse", function() {
+    $(".codeIntro1").html('View Less...');
+})

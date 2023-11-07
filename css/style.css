@@ -214,12 +214,16 @@ html {
   overflow-x: hidden;
   padding-top: 20px;
   border-right: 3px solid lightseagreen;
+  text-align: center;
 }
 .sidebar .logo {
   width: auto;
   padding-top: 20px;
   border-bottom-style: inset;
   border-bottom-color: lightseagreen;
+}
+.sidebar .logo .nav-dark .initials {
+  display: grid;
 }
 .sidebar .logo .nav-dark .initials .eklogo {
   font-size: 1.8em;

@@ -8,6 +8,7 @@ const phone = document.getElementById('phone');
 const message = document.getElementById('message');
 const submit = document.getElementsByClassName('btn-primary');
 const warnMsg = document.getElementById('errorMsg');
+const tabletMenu = document.querySelector('.tabNavbar');
 
 // Prevent submission till validation has been checked.
 
@@ -152,7 +153,7 @@ function closeRightMenu() {
 // tablet navigation
 function openNav() {
     document.getElementById('tabSidebar').style.left = '0';
-    // document.getElementsByClassName('main-inner').style.marginLeft = '25%';
+    
     document.getElementById('tabSidebar').style.display = 'block';
     document.getElementById('openbtn').style.display = 'none';
 }
@@ -161,4 +162,9 @@ function closeNav() {
     document.getElementById('tabSidebar').style.left = '-250px';
     // document.getElementsByClassName('.main-inner').style.marginLeft = '0';
 }
+
+// Collapse mobile menu on homepage
+$('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+});
 

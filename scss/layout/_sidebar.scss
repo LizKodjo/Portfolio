@@ -6,6 +6,7 @@
     overflow-x: hidden;
     padding-top: 20px;
     border-right: 3px solid lightseagreen;
+    text-align: center;
 
     // Styling logo
     .logo {
@@ -19,6 +20,7 @@
 
             // Container with logo
             .initials {
+                display: grid;
                 .eklogo {
                     font-size: em(45px);
                     color: $white;

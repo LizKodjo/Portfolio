@@ -87,6 +87,11 @@ html {
 .container {
   width: 100%;
 }
+@media (max-width: 373px) {
+  .card {
+    height: 545px;
+  }
+}
 @media (max-width: 576px) {
   .projects .myProjects .proj-three,
   .projects .myProjects .proj-four {

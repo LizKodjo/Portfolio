@@ -10,6 +10,12 @@
     width:100%;
 }
 
+@media (max-width: 373px) {
+    .card {
+        height: 545px;
+    }
+}
+
 @media (max-width: 576px) {
 
     .projects {

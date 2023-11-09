@@ -82,7 +82,8 @@ const validateInputs = () => {
     if (!phoneValue) {
         // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
-    } else if (!isValidPhone(phoneValue) || isNaN(phoneValue)) {
+    } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
+    //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
         setError(phone, 'Please enter a valid phone number');
     } else {
@@ -99,13 +100,13 @@ const validateInputs = () => {
 
 // Function to check validation of email
 function isValidEmail(email) {
-    return /^[A-Za-z][\._\-][0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/.test(String(email).toLowerCase());
+    return /([a-zA-Z0-9.])+@([a-zA-Z0-9-])+(?:\.[a-zA-Z]+)$/g.test(String(email).toLowerCase());
 
 }
 
 // Function to validate phone number
 function isValidPhone(phone) {
-    return /\s*\(?(0[1-6]{1}[0-9]{3}\)?[0-9]{6})\s*/;
+    return /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g;
 }
 
 

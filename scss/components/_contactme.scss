@@ -5,6 +5,7 @@
 .btn-primary {
     @include btncolor;
     margin-top: 15px;
+    margin-bottom: 15px;
 
     :active {
         background-color: $primary-btn-color;

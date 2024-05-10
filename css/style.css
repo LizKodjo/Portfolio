@@ -474,6 +474,9 @@ footer .container a {
 .main-inner .mt-3 .myProjects .proj-one .card-one {
   filter: none;
 }
+.main-inner .mt-3 .myProjects .proj-two .card-two {
+  filter: none;
+}
 .main-inner .mt-3 .myProjects .col-sm-4 {
   padding-bottom: 15px;
 }

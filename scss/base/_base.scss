@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 
 }
 
@@ -7,13 +8,12 @@ body {
     font-size: $base__font-size;
     line-height: calc($base__line / $base__font-size);
     font-family: $font-family--primary;
-    margin: 0;
+    min-height: 100vh;
     color: $white;
+    //background-color: $black;
+    background: radial-gradient(#333, #000);
+    overflow: hidden;
 }
-
-
-
-
 
 // sliding nav
 .smallnavbar {
@@ -25,17 +25,17 @@ body {
     border-top: 2px inset lightseagreen;
 }
 
-
-
-
 // Change link colors from blue to black
 .workLink,
 .telLink,
 .emailLink {
     color: $white;
 }
-.telLink:hover, .telLink:focus,
-.emailLink:hover, .emailLink:focus {
+
+.telLink:hover,
+.telLink:focus,
+.emailLink:hover,
+.emailLink:focus {
     color: lightseagreen;
 }
 
@@ -46,31 +46,17 @@ body {
 
 // Trying something
 
-.banner-image {
-    background-image: linear-gradient(45deg, black, lightseagreen, black);
-}
+// .banner-image {
+//     background-image: linear-gradient(45deg, black, lightseagreen, black);
+// }
 
 footer {
     display: none;
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }
-
-
-
-.main-title {
-    text-shadow: 1px 1px 5px black;
-}
-
-.sub-title {
-    text-shadow: 0 0 5px black;
-}
-
-
 
 .scrollTopBtn {
     text-align: center;
@@ -81,7 +67,7 @@ html {
 }
 
 .fa-brands {
-    color:white;
+    color: white;
     font-size: 35px;
 }
 

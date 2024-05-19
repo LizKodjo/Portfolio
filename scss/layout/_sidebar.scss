@@ -1,72 +1,120 @@
-// Fixing the sidebar
-.sidebar {
-    @include sidenavspec;
-    width: 250px;
-    background-color: $black;
-    overflow-x: hidden;
-    padding-top: 20px;
-    border-right: 3px solid lightseagreen;
-    text-align: center;
+// // Fixing the sidebar
+// .sidebar {
+//     @include sidenavspec;
+//     width: 250px;
+//     background-color: $black;
+//     overflow-x: hidden;
+//     padding-top: 20px;
+//     border-right: 3px solid lightseagreen;
+//     text-align: center;
 
-    // Styling logo
-    .logo {
-        width: auto;
-        padding-top: 20px;
-        border-bottom-style: inset;
-        border-bottom-color: lightseagreen;
+//     // Styling logo
+//     .logo {
+//         width: auto;
+//         padding-top: 20px;
+//         border-bottom-style: inset;
+//         border-bottom-color: lightseagreen;
 
-        // Container holding logo
-        .nav-dark {
+//         // Container holding logo
+//         .nav-dark {
 
-            // Container with logo
-            .initials {
-                display: grid;
-                .eklogo {
-                    font-size: em(45px);
-                    color: $white;
-                }
+//             // Container with logo
+//             .initials {
+//                 display: grid;
+//                 .eklogo {
+//                     font-size: em(45px);
+//                     color: $white;
+//                 }
+//             }
+//         }
+//     }
+
+//     .social {
+//         // Create a gap between the items listed above
+//         padding-top: 30px;
+//         // Colour the social media icons
+//         a {
+//             color: $black;
+//         }
+//     }
+
+
+
+//     // Font-size of sidenav links
+//     .maininfo {
+//         font-size: 2rem;
+//         margin-top: 30px;
+//         padding-bottom: 30px;
+//         border-bottom-color: lightseagreen;
+//         border-bottom-style: inset;
+
+//         // Color of sidenav links
+//         a {
+//             color: $white;
+//         }
+
+//         // Styling hover
+//         .mainlist {
+
+//             :hover {
+//                 text-decoration: underline;
+//                 background-color: transparent;
+
+//             }
+//         }
+//     }
+// }
+
+
+// .initials,
+// .maininfo {
+//     width: auto;
+// }
+
+
+
+
+
+// New design
+.mainlist {
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: center;
+    gap: 30px;
+
+    li {
+        position: relative;
+        list-style: none;
+
+        a {
+            position: relative;
+            font-size: 1.5em;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+
+            &::before {
+                content: attr(data-text);
+                position: absolute;
+                color: var(--clr);
+                width: 0;
+                overflow: hidden;
+                transition: 1s;
+                border-right: 8px solid var(--clr);
+                -webkit-text-stroke: 1px var(--clr);
+            }
+
+            &:hover::before {
+                width: 100%;
+                //-webkit-text-stroke: 1px var(--clr);
+                filter: drop-shadow(0 0 25px var(--clr));
             }
         }
     }
-
-    .social {
-        // Create a gap between the items listed above
-        padding-top: 30px;
-        // Colour the social media icons
-        a {
-            color: $black;
-        }
-    }
-
-   
-
-    // Font-size of sidenav links
-    .maininfo {
-        font-size: 2rem;
-        margin-top: 30px;
-        padding-bottom: 30px;
-        border-bottom-color: lightseagreen;
-        border-bottom-style: inset;
-
-        // Color of sidenav links
-        a {
-            color: $white;
-        }
-
-        // Styling hover
-        .mainlist {
-
-            :hover {
-                text-decoration: underline;
-                background-color: transparent;
-
-            }
-        }
-    }
-}
-
-
-.initials,
-.maininfo {
-    width: auto;
 }

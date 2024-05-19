@@ -16,17 +16,63 @@
     }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .headings {
+        transform: translate(-50%, -50%);
+    }
+
+    footer {
+        font-size: 20px;
+        justify-content: space-between;
+    }
+
+    .scheme {
+        margin-right: 160px;
+    }
+
+    .main-inner {
+        // margin-left: 160px;
+        font-size: em(20px);
+    }
+}
+
+@media (max-width: 577px) {
+
+
+    .box {
+        width: 80px;
+        height: 80px;
+
+        a {
+            font-size: em(30px);
+        }
+    }
+
+    .main-title {
+        font-size: 1.3em;
+    }
 
     .projects {
         .myProjects {
+
             .proj-three,
             .proj-four {
                 padding: 15px 70px 0;
             }
         }
     }
-   
+
 
     .banner-btn {
         transform: translate(50%, -50%);
@@ -87,43 +133,11 @@
 
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-
-@media (min-width: 576px) {
-
-    .headings {
-        transform: translate(-50%, -50%);
-    }
-
-    footer {
-        font-size: 20px;
-        justify-content: space-between;
-    }
-
-    .scheme {
-        margin-right: 160px;
-    }
-
-    .smallnavbar {
-        display: none;
-    }
-
-    .main-inner {
-        // margin-left: 160px;
-        font-size: em(20px);
-    }
-}
-
 @media (min-width:768px) {
+
+    // .main-title {
+    //     font-size: 2em;
+    // }
 
     .banner-btn {
         transform: translate(50%, -50%);
@@ -141,12 +155,20 @@
     }
 
 
-    .smallnavbar {
+    .smallnavbar,
+    .menuBtn {
         display: none;
     }
-  
+
     .scheme {
         margin-right: 160px;
+    }
+}
+
+@media (max-width: 769) {
+    .smallnavbar,
+    .menuBtn {
+        display: none;
     }
 }
 
@@ -164,7 +186,11 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:991px) {
+
+    // .main-title {
+    //     font-size: 3em;
+    // }
 
     .headings {
         // position: absolute;
@@ -176,6 +202,7 @@
     .banner-btn {
         transform: translate(125%, -50%);
     }
+
     // .scrollTopBtn {
     //     margin-left: -120px;
     // }

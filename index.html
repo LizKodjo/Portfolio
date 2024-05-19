@@ -27,49 +27,58 @@
 
         <!-- Side nav -->
         <!-- Initials -->
-        <div class="container sidebar">
-            <div class="container logo">
-                <nav class="navbar navbar-expand-sm bg-dark nav-dark">
-                    <div class="container initials">
-                        <a class="navbar-brand eklogo" href="#">EK</a>
-                    </div>
-                </nav>
-            </div>
 
-            <!-- Links to my information -->
-            <div class="container maininfo">
-                <ul class="nav flex-column mainlist">
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me</a>
+
+        <!-- Links to my information -->
+        <div class="container maininfo">
+
+            <div class="container sidebar">
+                <!-- <div class="container logo">
+                    <nav class="navbar navbar-expand-sm bg-dark nav-dark">
+                        <div class="container initials">
+                            <a class="navbar-brand eklogo" href="#">EK</a>
+                        </div>
+                    </nav>
+                </div> -->
+                <ul class="mainlist">
+                    <li style="--clr:#ff6600">
+                        <a class="nav-link" href="aboutme.html" data-text="&nbsp;About">&nbsp;About&nbsp;</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">My Portfolio</a>
+                    <li class="nav-item" style="--clr:#ff9d04">
+                        <a class="nav-link" href="#projects" data-text="&nbsp;Portfolio">&nbsp;Portfolio&nbsp;</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="codeexamples.html">Coding Examples</a>
+                    <li class="nav-item" style="--clr:#ffdd1c">
+                        <a class="nav-item" href="codeexamples.html" data-text="&nbsp;Code">&nbsp;Code&nbsp;</a>
                     </li>
-                    <li>
-                        <a class="nav-item" href="scsscheme.html">SCS Scheme</a>
+                    <li style="--clr:#00dc82">
+                        <a class="nav-item" href="scsscheme.html"
+                            data-text="&nbsp;SCS &nbsp;Scheme">&nbsp;SCS<br>&nbsp;Scheme&nbsp;</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-item" href="#contact">Contact Me</a>
+                    <li class="nav-item" style="--clr:#ff7f00">
+                        <a class="nav-item" href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
                     </li>
                 </ul>
-            </div>
-            <div class="container social">
+                <!-- <div class="container social"> -->
                 <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
                 <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
                         class="fa-brands fa-github"></i></a>
+
+                <!-- </div> -->
             </div>
+
         </div>
 
         <!-- Tablet devices -->
         <div class="container tabletNavbar">
             <div id="tabSidebar" class="tabNavbar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-                <a href="index.html">EK</a>
+                <div class="box">
+                    <a href="index.html">EK</a>
+                    <!-- <h2>EK</h2> -->
+                </div>
+                <!-- <a href="index.html">EK</a> -->
                 <a href="aboutme.html">About Me</a>
                 <a href="#projects" onclick="closeNav()">My Portfolio</a>
                 <a href="codeexamples.html">Coding Examples</a>
@@ -84,47 +93,44 @@
         </div>
 
         <!-- Mobile devices -->
-        <nav class="navbar navbar-inverse navbar-fixed-top smallnavbar">
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top smallnavbar"> -->
 
-            <!-- Hamburger icon -->
-            <div class="container-fluid">
-                <button onclick="openRightMenu()" type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">EK</a>
+        
+        <span><i onclick=showSideBar() class="fa-solid fa-bars menuBtn"></i></span>
+
+        <nav class="mobnavbar">
+            <div class="box">
+                <a href="index.html">EK</a>
+                <!-- <h2>EK</h2> -->
             </div>
 
-            <!-- Menu items -->
-            <div class="collapse navbar-collapse" id="myNavbar">
 
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#projects">My Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="codeexamples.html">Coding Examples</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="scsscheme.html">SCS Scheme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
+            <span><i onclick="hideSidebar()" class="fa-solid fa-xmark closeMenu"></i></span>
+
+            <!-- <ul class="tabletSidebar">
+                <li class="mobnav__item"><a href="aboutme.html" class="mobnav__link">About Me</a></li>
+                <li class="mobnav__item"><a href="#projects" class="mobnav__link">My Portfolio</a></li>
+                <li class="mobnav__item"><a href="codeexamples.html" class="mobnav__link">Coding Examples</a></li>
+                <li class="mobnav__item"><a href="scsscheme.html" class="mobnav__link">SCS Scheme</a></li>
+                <li class="mobnav__item"><a href="#contact" class="mobnav__link">Contact Me</a></li>
+            </ul> -->
+
+            <ul class="mobnav__links">
+
+                <li class="mobnav__item"><a href="aboutme.html" class="mobnav__link">About Me</a></li>
+                <li class="mobnav__item"><a href="#projects" class="mobnav__link">My Portfolio</a></li>
+                <li class="mobnav__item"><a href="codeexamples.html" class="mobnav__link">Coding Examples</a></li>
+                <li class="mobnav__item"><a href="scsscheme.html" class="mobnav__link">SCS Scheme</a></li>
+                <li class="mobnav__item"><a href="#contact" class="mobnav__link">Contact Me</a></li>
+                
+            </ul>
+            <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
+                class="fa-brands fa-github"></i></a>      
+
         </nav>
     </header>
     <main>
         <!-- Main picture -->
-
-
         <div class="container-sm main-pic">
             <div class="banner-image">
                 <h3 class="banner-btn"><a href="#contact">Scroll down</a></h3>
@@ -164,7 +170,7 @@
 
             <div class="headings">
                 <div class="main-heading">
-                    <h1 class="main-title">Elizabeth Kodjo</h1>
+                    <h1 class="main-title" data-text="Elizabeth Kodjo">Elizabeth&nbsp;Kodjo</h1>
                 </div>
 
                 <div class="sub-heading">

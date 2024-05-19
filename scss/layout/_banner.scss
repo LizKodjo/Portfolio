@@ -1,6 +1,6 @@
 // Banner box
 .main-pic {
-    //height: 100vh;
+    overflow: hidden;
 
     // Banner image container
     .banner-image {
@@ -11,12 +11,6 @@
             //width: 100%;
             // filter: grayscale(100%);
             background: radial-gradient(#333, #000);
-
-
-            // display:flex;
-            // justify-content: center;
-            // align-items: center;
-            // overflow: hidden;
         }
 
         // Banner title
@@ -40,11 +34,12 @@
     right: 50%;
     z-index: 1;
     color: $white;
+
     // transform: translate(50%, -50%);
     // scroll-behavior: smooth;
     a {
         color: $white;
-        
+
     }
 }
 
@@ -56,6 +51,6 @@
 
     a {
         // Styling the appearance and behaviour of button
-        color: $white;       
+        color: $white;
     }
 }

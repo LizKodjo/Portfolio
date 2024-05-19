@@ -1,0 +1,80 @@
+.mobnavbar {
+    background-color: $black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(255, 255, 255, .2);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    ul {
+        width: 100%;
+        list-style: none;
+
+    }
+
+    li {
+        width: 100%;
+        height: 50px;
+
+    }
+
+    .mobnav__link,
+    .closeMenu {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: $white;
+        width: 100%;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+
+    .box {
+        margin-right: auto;
+    }
+
+
+    .tabletSidebar {
+
+
+
+
+
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        li {
+            width: 100%;
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+}
+
+.menuBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    height: 26px;
+    width: 26px;
+}
+
+// .closeMenu {
+//     position: ;
+// }

@@ -1,0 +1,30 @@
+.main-title {
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    //overflow: hidden;
+    text-transform: uppercase;
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: bottom;
+        transform: rotateX(180deg);
+        line-height: 0.865em;
+        background:linear-gradient(0deg, $white 0, transparent 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.5;
+    }
+}
+
+.sub-title {
+    position:absolute;
+    top:80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

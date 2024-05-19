@@ -1,0 +1,78 @@
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.box {
+    position: relative;
+    // width: 300px;
+    //height: 300px;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%,
+            transparent 5%, transparent 40%, #ff2770 50%);
+    animation: rotating 2s linear infinite;
+    animation-play-state: paused;
+    border-radius: 20px;
+    filter: drop-shadow(0 15px 50px $black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1) {
+        filter: drop-shadow(0 15px 50px $black) hue-rotate(225deg);
+    }
+
+    &:nth-child(3) {
+        filter: drop-shadow(0 15px 50px $black) hue-rotate(310deg);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%,
+                transparent 5%, transparent 40%, #45f3ff 50%);
+        animation: rotating 2s linear infinite;
+        animation-delay: -0.5s;
+        animation-play-state: paused;
+        border-radius: 20px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 6px;
+        border: 8px solid #25252b;
+        border-radius: 15px;
+        background: #2d2d39;
+    }
+    a {
+        position:absolute;
+        inset: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: $white;
+        background: rgba(0, 0, 0, 0.2);
+        font-weight: 500;
+        z-index: 10000;
+        text-transform: uppercase;
+        box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid rgba(255,255, 255, .15);
+        text-decoration: none;
+        //font-size: 15px;
+    }
+    &:hover, &:hover::before {
+        animation-play-state: running;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}

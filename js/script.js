@@ -9,6 +9,7 @@ const message = document.getElementById('message');
 const submit = document.getElementsByClassName('btn-primary');
 const warnMsg = document.getElementById('errorMsg');
 const tabletMenu = document.querySelector('.tabNavbar');
+const sidebar = document.querySelector('.mobnavbar')
 
 // Prevent submission till validation has been checked.
 
@@ -165,7 +166,17 @@ function closeNav() {
 }
 
 // Collapse mobile menu on homepage
-$('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-});
+// $('.js-scroll-trigger').click(function() {
+//     $('.navbar-collapse').collapse('hide');
+// });
 
+
+
+// New mobile menu
+function showSideBar() {
+    sidebar.style.display = 'flex';
+}
+
+function hideSidebar(){
+    sidebar.style.display = 'none';
+}

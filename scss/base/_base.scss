@@ -1,21 +1,22 @@
 * {
     box-sizing: border-box;
     //margin: 0;
-    //padding: 0;
+    // padding: 0;
     font-size: $base__font-size;
     line-height: calc($base__line / $base__font-size);
     font-family: $font-family--primary;
     
-
 }
 
 body {
     
     //min-height: 100vh;
+    margin: 0;
+    padding: 0;
     color: $white;
     background-color: $black;
-    //background: radial-gradient(#333, #000);
-    overflow: hidden;
+    background: radial-gradient(#333, #000);
+    // overflow: hidden;
 }
 
 // sliding nav

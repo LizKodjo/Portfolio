@@ -477,13 +477,34 @@ footer .container a {
   opacity: 0.5;
 }
 
-.sub-title {
+.sub-heading {
+  position: relative;
+}
+.sub-heading .sub-title {
   position: absolute;
+  color: transparent;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+  background-clip: text;
+  animation: animate 20s linear infinite;
+  background-size: 1000%;
 }
 
+@keyframes animate {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
 @property --a {
   syntax: "<angle>";
   inherits: false;
@@ -611,8 +632,11 @@ footer .container a {
   position: fixed;
   top: 15px;
   right: 15px;
-  height: 26px;
-  width: 26px;
+  font-size: 30px;
+}
+
+.closeMenu {
+  font-size: 30px;
 }
 
 .formnames {

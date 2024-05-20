@@ -1,3 +1,5 @@
+// Mobile menu
+
 .mobnavbar {
     background-color: $black;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
@@ -45,13 +47,7 @@
     .box {
         margin-right: auto;
     }
-
-
     .tabletSidebar {
-
-
-
-
 
         display: none;
         align-items: flex-start;
@@ -71,10 +67,9 @@
     position: fixed;
     top: 15px;
     right: 15px;
-    height: 26px;
-    width: 26px;
+    font-size: 30px;
 }
 
-// .closeMenu {
-//     position: ;
-// }
+.closeMenu {
+    font-size: 30px;
+}

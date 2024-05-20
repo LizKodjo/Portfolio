@@ -1,11 +1,14 @@
+// Main heading with reflection
+
 .main-title {
-    position:relative;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: sans-serif;
     //overflow: hidden;
     text-transform: uppercase;
+
     &::before {
         content: attr(data-text);
         position: absolute;
@@ -14,7 +17,7 @@
         transform-origin: bottom;
         transform: rotateX(180deg);
         line-height: 0.865em;
-        background:linear-gradient(0deg, $white 0, transparent 80%);
+        background: linear-gradient(0deg, $white 0, transparent 80%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -22,9 +25,34 @@
     }
 }
 
-.sub-title {
-    position:absolute;
-    top:80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.sub-heading {
+    position: relative;
+
+    .sub-title {
+        position: absolute;
+        color: transparent;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
+        background-clip: text;
+        animation: animate 20s linear infinite;
+        background-size: 1000%;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
 }

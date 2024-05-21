@@ -8,10 +8,15 @@
     z-index: 2;
     top: 0;
     left: -250px;
-    background-color:#111;
+    //background-color:#111;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(255, 255, 255, .2);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    justify-content: center;
+    align-content: center;
 
     // Navigation links
 
@@ -51,6 +56,9 @@
     border: none;
     top: 15px;
     right: 15px;
+    .tabletOpen {
+        font-size: 40px;
+    }
 }
 
 //  Color of button when clicked to open navigation panel

@@ -21,17 +21,14 @@
 
     <header>
         <!-- Side nav -->
-        <!-- Initials -->
+        <!-- Initials - Logo -->
+
+        <div class="box mainLogo">
+            <a href="index.html">EK</a>
+        </div>
         <div class="container maininfo">
 
             <div class="container sidebar">
-                <!-- <div class="container logo">
-                <nav class="navbar navbar-expand-sm bg-dark nav-dark">
-                    <div class="container initials">
-                        <a class="navbar-brand eklogo" href="index.html">EK</a>
-                    </div>
-                </nav>
-            </div> -->
 
                 <!-- Links to my information -->
 
@@ -53,14 +50,18 @@
                     <li class="nav-item" style="--clr:#ff7f00">
                         <a class="nav-item" href="index.html#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                    </li>
                 </ul>
 
                 <!-- <div class="container social"> -->
                 <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
-                <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
-                        class="fa-brands fa-github"></i></a>
+                <!-- <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
+                        class="fa-brands fa-github"></i></a> -->
             </div>
         </div>
 
@@ -68,16 +69,21 @@
         <div class="container tabletNavbar">
             <div id="tabSidebar" class="tabNavbar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-                <a href="index.html">EK</a>
+                <!-- <div class="box tabLogo">
+                    <a href="index.html" class="logoText">EK</a>
+                </div> -->
+                <!-- <a href="index.html">EK</a> -->
                 <a href="aboutme.html">About Me</a>
                 <a href="index.html#projects">My Portfolio</a>
                 <a href="codeexamples.html">Coding Examples</a>
                 <a href="scsscheme.html">SCS Scheme</a>
                 <a href="index.html#contact">Contact Me</a>
+                <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
             </div>
             <div id="tabMain">
                 <button class="openbtn" onclick="openNav()">
-                    <span><i class="fa-solid fa-bars"></i></span>
+                    <span><i class="fa-solid fa-bars tabletOpen"></i></span>
                 </button>
             </div>
         </div>
@@ -86,6 +92,7 @@
         <!-- <nav class="navbar navbar-inverse navbar-fixed-top smallnavbar"> -->
 
         <span><i onclick=showSideBar() class="fa-solid fa-bars menuBtn"></i></span>
+
 
         <nav class="mobnavbar">
             <div class="box">

@@ -113,7 +113,7 @@ function isValidPhone(phone) {
 
 // Use a loop to get the letters of the heading.
 
-// Create an empty array
+// //Create an empty array
 // let testArray = [];
 // // Fetch the heading
 // let pageTitle = document.querySelector('.main-title').textContent;

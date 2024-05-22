@@ -30,6 +30,10 @@ body {
   color: #fff;
 }
 
+.workLink {
+  text-decoration: underline;
+}
+
 .telLink:hover,
 .telLink:focus,
 .emailLink:hover,
@@ -302,13 +306,17 @@ html {
     width: 1170px;
   }
 }
+@media (max-height: 650px) {
+  .mainlist {
+    justify-content: flex-end;
+  }
+}
 .mainlist {
   height: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  justify-content: center;
   gap: 30px;
 }
 .mainlist li {
@@ -618,9 +626,6 @@ footer .container a {
 }
 .box:nth-child(1) {
   filter: drop-shadow(0 15px 50px #000) hue-rotate(225deg);
-}
-.box:nth-child(3) {
-  filter: drop-shadow(0 15px 50px #000) hue-rotate(310deg);
 }
 .box::before {
   content: "";

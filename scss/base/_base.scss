@@ -35,6 +35,9 @@ body {
 .emailLink {
     color: $white;
 }
+.workLink {
+    text-decoration: underline;
+}
 
 .telLink:hover,
 .telLink:focus,

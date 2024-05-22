@@ -22,9 +22,9 @@
         filter: drop-shadow(0 15px 50px $black) hue-rotate(225deg);
     }
 
-    &:nth-child(3) {
-        filter: drop-shadow(0 15px 50px $black) hue-rotate(310deg);
-    }
+    // &:nth-child(3) {
+    //     filter: drop-shadow(0 15px 50px $black) hue-rotate(310deg);
+    // }
 
     &::before {
         content: '';

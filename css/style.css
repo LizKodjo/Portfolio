@@ -302,17 +302,13 @@ html {
     width: 1170px;
   }
 }
-@media (max-height: 1000px) {
-  .mainlist {
-    justify-content: flex-end;
-  }
-}
 .mainlist {
   height: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   padding: 5px;
+  justify-content: center;
   gap: 30px;
 }
 .mainlist li {

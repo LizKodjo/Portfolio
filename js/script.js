@@ -20,6 +20,10 @@ if (form) {
         validateInputs();
     });
 }
+function resetForm() {
+    form.reset();
+}
+
 
 
 const setError = (element, message) => {
@@ -113,32 +117,32 @@ function isValidPhone(phone) {
 
 // Use a loop to get the letters of the heading.
 
-// //Create an empty array
-// let testArray = [];
-// // Fetch the heading
-// let pageTitle = document.querySelector('.main-title').textContent;
-// // console.log(pageTitle + ' = text from the title');
-// // Split the information received into the array
-// testArray = pageTitle.split('');
-// // console.log(testArray + ' = letter to use later');
-// // let testResult = document.querySelector('.type-result');
-// let testResult = [];
+//Create an empty array
+let testArray = [];
+// Fetch the heading
+let pageTitle = document.querySelector('.sub-title').textContent;
+// console.log(pageTitle + ' = text from the title');
+// Split the information received into the array
+testArray = pageTitle.split('');
+// console.log(testArray + ' = letter to use later');
+// let testResult = document.querySelector('.type-result');
+let testResult = [];
 
-// // Make sure the is at least a letter on the page to keep the box from moving
-// document.querySelector('.main-title').innerText = testArray[0];
+// Make sure the is at least a letter on the page to keep the box from moving
+document.querySelector('.sub-title').innerText = testArray[0];
 
 
-// for (let i = 0; i < testArray.length; i++) {
-//     // Set time 
-//     setTimeout(function () {
-//         // console.log(testArray[i] + ' = current letter we are adding to title');
-//         // Save the characters in the array to print on screen
-//         testResult.push(testArray[i]);
-//         document.querySelector('.main-title').innerText = testResult.join('');
-//         // console.log(testResult[i]);
+for (let i = 0; i < testArray.length; i++) {
+    // Set time 
+    setTimeout(function () {
+        // console.log(testArray[i] + ' = current letter we are adding to title');
+        // Save the characters in the array to print on screen
+        testResult.push(testArray[i]);
+        document.querySelector('.sub-title').innerText = testResult.join('');
+        // console.log(testResult[i]);
 
-//     }, (i + 1) * 100);
-// }
+    }, (i + 1) * 100);
+}
 
 
 

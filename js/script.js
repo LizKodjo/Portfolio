@@ -75,7 +75,7 @@ const validateInputs = () => {
         setError(lname, 'Please enter your last name.');
     }
     else if (!lnameValue.match(/^[A-z]\w/g)) {
-        setError(lname, 'Please enter a valid name');
+        setError(lname, 'Please enter a valid name.');
     }
     else {
         setSuccess(lname);
@@ -85,7 +85,7 @@ const validateInputs = () => {
         setError(email, 'Please enter an email');
     } else if (!isValidEmail(emailValue)) {
         // If email is not valid, show error
-        setError(email, 'Please enter a valid email');
+        setError(email, 'Please enter a valid email.');
     } else {
         setSuccess(email);
     }
@@ -95,13 +95,13 @@ const validateInputs = () => {
     } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
         //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
-        setError(phone, 'Please enter a valid phone number');
+        setError(phone, 'Please enter a valid phone number.');
     } else {
         setSuccess(phone);
     }
     if (!messageValue) {
         // If message field is blank, show error
-        setError(message, 'Please enter a message');
+        setError(message, 'Please enter a message.');
     } else {
         setSuccess(message);
     }

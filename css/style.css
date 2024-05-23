@@ -79,7 +79,7 @@ html {
 }
 
 .treehouseURL {
-  font-size: medium;
+  font-size: large;
 }
 
 .container {
@@ -620,6 +620,7 @@ footer .container a {
   animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
   animation-play-state: paused;
+  -moz-animation-play-state: paused;
   border-radius: 20px;
   filter: drop-shadow(0 15px 50px #000);
   display: flex;
@@ -633,8 +634,11 @@ footer .container a {
   height: 100%;
   background: repeating-conic-gradient(from var(--a), #20b2aa 0%, #20b2aa 5%, transparent 5%, transparent 40%, #20b2aa 50%);
   animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
   animation-delay: -0.5s;
+  -moz-animation-delay: 0.5s;
   animation-play-state: paused;
+  -moz-animation-play-state: paused;
   border-radius: 20px;
 }
 .box::after {
@@ -663,6 +667,7 @@ footer .container a {
 }
 .box:hover, .box:hover::before {
   animation-play-state: running;
+  -moz-animation-play-state: running;
 }
 
 @keyframes rotating {
@@ -758,7 +763,7 @@ footer .container a {
 }
 .main-inner .container .col-sm-7 {
   margin-top: 25px;
-  background-color: #333;
+  background-color: #105c57;
   padding: 15px;
 }
 .main-inner .container #form .mt-3 .formnames {
@@ -788,7 +793,7 @@ footer .container a {
 .input-control .errorMsg {
   color: red;
   font-size: small;
-  background-color: ghostwhite;
+  background-color: tan;
 }
 
 .submitbtn:hover,

@@ -20,10 +20,6 @@ if (form) {
         validateInputs();
     });
 }
-function resetForm() {
-    form.reset();
-}
-
 
 
 const setError = (element, message) => {
@@ -64,6 +60,11 @@ const validateInputs = () => {
     if (!fnameValue) {
         // If first name field is blank, show error
         setError(fname, 'Please enter your first name.');
+    }
+    else if (!fnameValue.match(/^[A-z]\w/g)) {
+        setError(fname, 'Please enter a valid name');
+
+
     } else {
         // add success class
         setSuccess(fname);
@@ -72,7 +73,11 @@ const validateInputs = () => {
     if (!lnameValue) {
         // If last name field is blank, show error
         setError(lname, 'Please enter your last name.');
-    } else {
+    }
+    else if (!lnameValue.match(/^[A-z]\w/g)) {
+        setError(lname, 'Please enter a valid name');
+    }
+    else {
         setSuccess(lname);
     }
     if (!emailValue) {
@@ -88,7 +93,7 @@ const validateInputs = () => {
         // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
     } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
-    //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
+        //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
         setError(phone, 'Please enter a valid phone number');
     } else {
@@ -159,7 +164,7 @@ function closeRightMenu() {
 // tablet navigation
 function openNav() {
     document.getElementById('tabSidebar').style.left = '0';
-    
+
     document.getElementById('tabSidebar').style.display = 'block';
     document.getElementById('openbtn').style.display = 'none';
 }
@@ -178,9 +183,12 @@ function closeNav() {
 
 // New mobile menu
 function showSideBar() {
+    sidebar.style.left = '0';
     sidebar.style.display = 'flex';
 }
 
-function hideSidebar(){
-    sidebar.style.display = 'none';
+// Hide mobile menu off screen
+function hideSidebar() {
+    sidebar.style.left = '-400px'
+    //sidebar.style.display = 'none';
 }

@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: .5s;
 
     ul {
         width: 100%;
@@ -44,6 +45,8 @@
 
     .box {
         margin-right: auto;
+        margin-top: 15px;
+        margin-left: 15px;
     }
 
 }

@@ -21,6 +21,10 @@
     //     max-width: 1px;
     // }
 
+    // .emailLink {
+    //     font-size: medium;
+    // }
+
     .card {
         height: auto;
     }
@@ -341,6 +345,7 @@
     .banner-image,
     .main-inner {
         margin-left: 300px;
+        border-left: 3px inset $logo-color;
     }
 
     .sidebar {

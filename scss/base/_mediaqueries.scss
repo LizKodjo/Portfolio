@@ -25,9 +25,9 @@
     //     font-size: medium;
     // }
 
-    .card {
-        height: auto;
-    }
+    // .card {
+    //     height: auto;
+    // }
 
     .box {
         width: 80px;
@@ -48,8 +48,8 @@
 
     .projects {
         .myProjects {
+            flex-direction: column;
 
-            .proj-three,
             .proj-four {
                 padding: 15px 70px 0;
             }
@@ -173,13 +173,36 @@
         font-size: 1em;
     }
 
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        .getintouch {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: stretch;
+        }
+    }
+
     .projects {
         .myProjects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
-            .proj-three,
-            .proj-four {
-                padding: 15px 70px 0;
+            .img-thumbnail {
+                height: 90px;
             }
+
+
+            // .proj-three,
+            // .proj-four {
+            //     padding: 15px 70px 0;
+            // }
         }
     }
 
@@ -295,6 +318,22 @@
     // .main-title {
     //     font-size: 3em;
     // }
+
+    .projects {
+        .myProjects {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .img-thumbnail {
+                height: 236px;
+                width: auto;
+            }
+        }
+    }
+
+
     .box {
         width: 120px;
         height: 120px;

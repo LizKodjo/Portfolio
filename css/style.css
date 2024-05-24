@@ -41,11 +41,6 @@ body {
   color: lightseagreen;
 }
 
-.img-thumbnail {
-  height: auto;
-  width: auto;
-}
-
 footer {
   display: none;
 }
@@ -90,9 +85,6 @@ html {
   padding-right: 0.5rem;
 }
 @media (min-width: 1px) {
-  .card {
-    height: auto;
-  }
   .box {
     width: 80px;
     height: 80px;
@@ -106,7 +98,9 @@ html {
   .sub-title {
     font-size: 0.7em;
   }
-  .projects .myProjects .proj-three,
+  .projects .myProjects {
+    flex-direction: column;
+  }
   .projects .myProjects .proj-four {
     padding: 15px 70px 0;
   }
@@ -182,9 +176,27 @@ html {
   .sub-title {
     font-size: 1em;
   }
-  .projects .myProjects .proj-three,
-  .projects .myProjects .proj-four {
-    padding: 15px 70px 0;
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+  }
+  #contact .getintouch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+  }
+  .projects .myProjects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projects .myProjects .img-thumbnail {
+    height: 90px;
   }
   .banner-btn {
     transform: translate(50%, -50%);
@@ -251,6 +263,16 @@ html {
   }
 }
 @media (min-width: 991px) {
+  .projects .myProjects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projects .myProjects .img-thumbnail {
+    height: 236px;
+    width: auto;
+  }
   .box {
     width: 120px;
     height: 120px;
@@ -330,7 +352,6 @@ html {
   text-decoration: none;
   line-height: 1em;
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
@@ -410,7 +431,7 @@ html {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #fff;
+  color: #20b2aa;
   display: block;
   transition: 0.3s;
 }
@@ -433,7 +454,7 @@ html {
   font-size: 40px;
   cursor: pointer;
   background-color: transparent;
-  color: #fff;
+  color: #20b2aa;
   padding: 10px 15px;
   border: none;
   top: 15px;
@@ -713,6 +734,7 @@ footer .container a {
   align-items: center;
   color: #fff;
   width: 100%;
+  color: #20b2aa;
 }
 .mobnavbar .box {
   margin-right: auto;
@@ -723,7 +745,8 @@ footer .container a {
 .menuBtn {
   top: 15px;
   right: 15px;
-  font-size: 40px;
+  font-size: 44px;
+  color: #20b2aa;
 }
 
 .menuBtn, .mainLogo {
@@ -826,7 +849,6 @@ footer .container a {
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .main-inner .mt-3 .myProjects .proj-one .card-one {
   filter: none;

@@ -176,14 +176,14 @@ html {
   .sub-title {
     font-size: 1em;
   }
-  #contact {
+  .contact {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: stretch;
     align-items: center;
   }
-  #contact .getintouch {
+  .contact .getintouch {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -263,6 +263,9 @@ html {
   }
 }
 @media (min-width: 991px) {
+  .contact {
+    display: block;
+  }
   .projects .myProjects {
     display: flex;
     flex-direction: row;

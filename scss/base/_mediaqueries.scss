@@ -173,7 +173,7 @@
         font-size: 1em;
     }
 
-    #contact {
+    .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -318,6 +318,10 @@
     // .main-title {
     //     font-size: 3em;
     // }
+
+    .contact {
+        display: block;
+    }
 
     .projects {
         .myProjects {

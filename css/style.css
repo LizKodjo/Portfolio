@@ -58,7 +58,7 @@ html {
 }
 
 .fa-brands {
-  color: white;
+  color: #20b2aa;
   font-size: 35px;
 }
 
@@ -196,7 +196,7 @@ html {
     align-items: center;
   }
   .projects .myProjects .img-thumbnail {
-    height: 90px;
+    height: auto;
   }
   .banner-btn {
     transform: translate(50%, -50%);
@@ -273,7 +273,7 @@ html {
     align-items: center;
   }
   .projects .myProjects .img-thumbnail {
-    height: 225px;
+    height: auto;
     width: auto;
   }
   .box {
@@ -588,7 +588,6 @@ footer .container a {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: sans-serif;
-  text-transform: uppercase;
 }
 .main-title::before {
   content: attr(data-text);

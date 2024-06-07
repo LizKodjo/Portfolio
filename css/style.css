@@ -218,7 +218,8 @@ html {
     font-size: 0.8em;
   }
   .sidebar,
-  .newMobBar {
+  .newMobBar,
+  .mobnavbar {
     display: none;
   }
   .smallnavbar {

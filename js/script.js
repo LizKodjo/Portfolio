@@ -189,6 +189,6 @@ function showSideBar() {
 
 // Hide mobile menu off screen
 function hideSidebar() {
-    sidebar.style.left = '-800px'
+    sidebar.style.left = '-766px'
     //sidebar.style.display = 'none';
 }

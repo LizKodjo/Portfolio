@@ -862,9 +862,6 @@ footer .container a {
 .main-inner .mt-3 .myProjects .col-sm-4 {
   padding-bottom: 15px;
 }
-.main-inner .mt-3 .myProjects .img-thumbnail {
-  filter: grayscale(100%);
-}
 .main-inner .mt-3 .myProjects .placeholder-title {
   position: absolute;
   z-index: 1;

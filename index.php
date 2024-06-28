@@ -1,188 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="description" content="Elizabeth Kodjo's web development skills">
-    <meta name="author" content="Elizabeth Kodjo">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elizabeth Kodjo | Web Developer</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <script src="https://kit.fontawesome.com/f8bda8a3df.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+$pageTitle = "Elizabeth Kodjo | Web Developer";
+include "inc/header.php";
+$codePage = "codeexamples.php";
+$bannerSubHeading = "Web Developer!";
 
-<body>
-    <!-- Side nav and main picture -->
+$scrollDown = "#contact";
 
-    <header>
-        <!-- Links to my information -->
-        <!-- Side nav -->
-        <!-- Initials - Logo-->
-        <div class="box mainLogo">
-            <a href="index.html">EK</a>
-        </div>
-        <div class="container maininfo">
+?>
 
-            <!-- <div class="box largeLogo">
-                <a href="index.html">EK</a>
-            </div> -->
-
-            <div class="container sidebar">
-                <ul class="mainlist">
-                    <li style="--clr:#20b2aa">
-                        <a class="nav-link" href="aboutme.html"
-                            data-text="&nbsp;About&nbsp;Me">&nbsp;About&nbsp;Me&nbsp;</a>
-                    </li>
-                    <li class="nav-item" style="--clr:#20b2aa">
-                        <a class="nav-link" href="#projects" data-text="&nbsp;Portfolio">&nbsp;Portfolio&nbsp;</a>
-                    </li>
-                    <li class="nav-item" style="--clr:#20b2aa">
-                        <a class="nav-item" href="codeexamples.html" data-text="&nbsp;Code">&nbsp;Code&nbsp;</a>
-                    </li>
-                    <li style="--clr:#20b2aa">
-                        <a class="nav-item" href="scsscheme.html" data-text="&nbsp;SCS">&nbsp;SCS&nbsp;</a>
-                    </li>
-                    <li class="nav-item" style="--clr:#20b2aa">
-                        <a class="nav-item" href="#contact" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/LizKodjo" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                    </li>
-                </ul>
-
-                <!-- <div class="container social"> -->
-                <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
-                <!-- <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i class="fa-brands fa-github"></i></a> -->
-
-
-                <!-- </div> -->
-            </div>
-
-
-        </div>
-
-        <!-- Tablet devices -->
-        <div class="container tabletNavbar">
-            <div id="tabSidebar" class="tabNavbar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-                <!-- <div class="box tabLogo">
-                    <a href="index.html" class="logoText">EK</a>
-                </div> -->
-                <!-- <a href="index.html">EK</a> -->
-                <a href="aboutme.html">About Me</a>
-                <a href="#projects" onclick="closeNav()">My Portfolio</a>
-                <a href="codeexamples.html">Coding Examples</a>
-                <a href="scsscheme.html">SCS</a>
-                <a href="#contact" onclick="closeNav()">Contact Me</a>
-                <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
-                        class="fa-brands fa-github"></i></a>
-            </div>
-            <div id="tabMain">
-                <button class="openbtn" onclick="openNav()">
-                    <span><i class="fa-solid fa-bars tabletOpen"></i></span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile devices -->
-        <div class="container newMobBar">
-            <span><i onclick=showSideBar() class="fa-solid fa-bars menuBtn"></i></span>
-
-            <!-- Mobile navbar -->
-            <nav class="mobnavbar">
-                <div class="box">
-                    <a href="index.html">EK</a>
-                    <!-- <h2>EK</h2> -->
-                </div>
-
-                <span><i onclick="hideSidebar()" class="fa-solid fa-xmark closeMenu"></i></span>
-
-                <ul class="mobnav__links">
-
-                    <li class="mobnav__item"><a href="aboutme.html" class="mobnav__link">About Me</a></li>
-                    <li class="mobnav__item" onclick="hideSidebar()"><a href="#projects" class="mobnav__link">My
-                            Portfolio</a></li>
-                    <li class="mobnav__item"><a href="codeexamples.html" class="mobnav__link">Coding Examples</a></li>
-                    <li class="mobnav__item"><a href="scsscheme.html" class="mobnav__link">SCS</a></li>
-                    <li class="mobnav__item" onclick="hideSidebar()"><a href="#contact" class="mobnav__link">Contact
-                            Me</a>
-                    </li>
-
-                </ul>
-                <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
-                        class="fa-brands fa-github"></i></a>
-
-            </nav>
-        </div>
-    </header>
     <main>
-        <!-- Main picture -->
-        <div class="container-sm main-pic">
-            <div class="banner-image">
-                <h3 class="banner-btn"><a href="#contact">Scroll down</a></h3>
-                <div class="bannerpic">
-                    <!-- <div class="glowing">
-                        <span style="--i:1"></span>
-                        <span style="--i:2"></span>
-                        <span style="--i:3"></span>
-                    </div>
-                    <div class="glowing">
-                        <span style="--i:1"></span>
-                        <span style="--i:2"></span>
-                        <span style="--i:3"></span>
-                    </div>
-                    <div class="glowing">
-                        <span style="--i:1"></span>
-                        <span style="--i:2"></span>
-                        <span style="--i:3"></span>
-                    </div>
+        <!-- Main Banner -->
+        
+         <?php include "inc/banner.php"; ?>
 
-                    <div class="glowing">
-                        <span style="--i:1"></span>
-                        <span style="--i:2"></span>
-                        <span style="--i:3"></span>
-                    </div>
-                    <div class="glowing">
-                        <span style="--i:1"></span>
-                        <span style="--i:2"></span>
-                        <span style="--i:3"></span>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Headings -->
-        <div class="container">
-
-            <div class="headings">
-                <div class="main-heading">
-                    <h1 class="main-title" data-text="Elizabeth Kodjo">Elizabeth&nbsp;Kodjo</h1>
-                </div>
-
-                <div class="sub-heading">
-                    <h2 class="sub-title">Web Developer!</h2>
-                </div>
-            </div>
-        </div>
         <div class="main-inner">
 
             <!-- My work -->
             <div class="container mt-3 projects" id="projects">
                 <div class="row myProjects">
-                    <div class="card col-lg-4 col-sm-4 proj-one">
-                        <img class="card-img-top img-thumbnail card-one" src="./img/netmatters.png"
+                    <?php include "inc/projects.php"; ?>
+                    <!-- <div class="card col-lg-4 col-sm-4">
+                        <img class="card-img-top img-thumbnail" src="./img/netmatters.png"
                             alt="Netmatters Office">
                         <div class="card-body">
                             <h4 class="card-title">Netmatters Rebuild</h4>
@@ -202,12 +41,12 @@
                         </div>
                     </div>
                     <div class="card col-lg-4 col-sm-4 proj-two">
-                        <!-- <h3 class="placeholder-title">Coming Soon!!!</h3> -->
+                        <h3 class="placeholder-title">Coming Soon!!!</h3>
                         <img class="card-img-top img-thumbnail card-two" src="./img/arrayPage.png" alt="JS Array">
                         <div class="card-body">
                             <h4 class="card-title">Random Pictures</h4>
                             <!-- <p class="card-text">Coming Soon!!!</p> -->
-                            <p class="card-text">Assigning pictures to emails.</p>
+                            <!-- <p class="card-text">Assigning pictures to emails.</p>
                             <div class="usedLanguages">
                                 <span><i class="fa-brands fa-html5"></i></span>
                                 <span><i class="fa-brands fa-css3-alt"></i></span>
@@ -219,18 +58,18 @@
                                 class="btn btn-primary projBtn">View Project</a>
                             <a href="https://github.com/LizKodjo/Array-Project.git" target="_blank"
                                 class="btn btn-primary codeBtn">View code</a>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div>
                     <div class="card col-lg-4 col-sm-4 proj-three">
                         <!-- <h3 class="placeholder-title">Coming Soon!!!</h3> -->
-                        <img class="card-img-top img-thumbnail card-three" src="./img/contactUs.PNG"
+                        <!-- <img class="card-img-top img-thumbnail card-three" src="./img/contactUs.PNG"
                             alt="Netmatters page">
                         <div class="card-body">
                             <h4 class="card-title">Contact Us Rebuild</h4>
                             <p class="card-text">Rebuilding Netmatters page with PHP</p>
                             <!-- <p>Using the following:</p> -->
-                            <div class="usedLanguages">
-                                <span><i class="fa-brands fa-html5"></i></span>
+                            <!-- <div class="usedLanguages"> --> 
+                                <!-- <span><i class="fa-brands fa-html5"></i></span>
                                 <span><i class="fa-brands fa-css3-alt"></i></span>
                                 <span><i class="fa-brands fa-sass"></i></span>
                                 <span><i class="fa-brands fa-js"></i></span>
@@ -238,8 +77,8 @@
                             </div>
                             <a href="#" class="btn btn-primary projBtn">View Project</a>
                             <a href="#" class="btn btn-primary codeBtn">View code</a>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> --> 
 
                     <!-- <div class="card col-lg-4 col-sm-6 proj-four">
                         <h3 class="placeholder-title">Coming Soon!!!</h3>
@@ -305,7 +144,7 @@
                 </div>
                 <!-- Contact Form -->
                 <div class="col-sm-7">
-                    <form class="form" id="form">
+                    <form class="form" id="form" method="POST">
                         <div class="mb-3 mt-3">
                             <div class="row formnames">
                                 <div class="col-sm-6 input-control">
@@ -335,7 +174,7 @@
                             </div>
                             <div class="mb-3 input-control">
                                 <label for="message">Message:</label>
-                                <textarea class="form-control" rows="5" id="message" name="text"></textarea>
+                                <textarea class="form-control" rows="5" id="message" name="message"></textarea>
                                 <small class="errorMsg"></small>
                             </div>
                             <button type="submit" class="btn btn-primary submitbtn" ">Submit</button>
@@ -350,22 +189,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <div class="container footer-items">
-                <a href="aboutme.html">About Me</a>
-                <a href="myportfolio.html">My Portfolio</a>
-                <a href="codeexamples.html">Coding Examples</a>
-                <a href="scsscheme.html">SCS Scheme</a>
-                <a href="#contact">Contact Me</a>
-            </div>
-        </div>
-    </footer>
-    <script src="js/jquery-3.7.0.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
 
-</body>
-
-</html>
+    <!-- footer -->
+   <?php include "inc/footer.php";

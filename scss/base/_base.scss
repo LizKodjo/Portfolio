@@ -92,6 +92,8 @@ html {
     text-align: center;
 }
 
-.treehouseURL {
+.treehouseURL, 
+.treehouseURL:hover {
     font-size: large;
+    color: $logo-color;
 }

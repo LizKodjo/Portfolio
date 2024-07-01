@@ -70,6 +70,7 @@
     color: $error;
     font-size: small;
     background-color: tan;
+    //display: none;
 }
 
 .submitbtn:hover,
@@ -85,7 +86,8 @@
 }
 
 .projBtn:hover, .projBtn:active, .projBtn:active:hover,
-.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover {
+.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover,
+.projBtn:focus, .codeBtn:focus {
     background-color: darken($logo-color, 10);
     border-color: darken($logo-color, 10);
 }

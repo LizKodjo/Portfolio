@@ -73,8 +73,10 @@ html {
   text-align: center;
 }
 
-.treehouseURL {
+.treehouseURL,
+.treehouseURL:hover {
   font-size: large;
+  color: #20b2aa;
 }
 
 .container {
@@ -835,7 +837,8 @@ footer .container a {
 }
 
 .projBtn:hover, .projBtn:active, .projBtn:active:hover,
-.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover {
+.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover,
+.projBtn:focus, .codeBtn:focus {
   background-color: #188781;
   border-color: #188781;
 }
@@ -852,12 +855,6 @@ footer .container a {
   text-align: center;
   display: flex;
   justify-content: center;
-}
-.main-inner .mt-3 .myProjects .proj-one .card-one {
-  filter: none;
-}
-.main-inner .mt-3 .myProjects .proj-two .card-two {
-  filter: none;
 }
 .main-inner .mt-3 .myProjects .col-sm-4 {
   padding-bottom: 15px;

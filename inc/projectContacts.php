@@ -17,7 +17,7 @@ $mail->Password = '7624ceb5b6c3e28b5c9c6ad764d10a3f';
 $mail->setFrom($email, $firstname);
 $mail->addAddress("ellizakodjo@outlook.com", "Elizabeth");
 
-$mail->Subject = "Enquires";
+$mail->Subject = "Enquiries";
 $mail->Body = $message;
 
 $mail->send();

@@ -73,8 +73,10 @@ html {
   text-align: center;
 }
 
-.treehouseURL {
+.treehouseURL,
+.treehouseURL:hover {
   font-size: large;
+  color: #20b2aa;
 }
 
 .container {
@@ -835,7 +837,8 @@ footer .container a {
 }
 
 .projBtn:hover, .projBtn:active, .projBtn:active:hover,
-.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover {
+.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover,
+.projBtn:focus, .codeBtn:focus {
   background-color: #188781;
   border-color: #188781;
 }

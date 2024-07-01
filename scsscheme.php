@@ -1,5 +1,12 @@
 <?php
 $pageTitle = "Elizabeth Kodjo | SCS";
+
+$codePage = "codeexamples.php";
+$scsPage = "#schemeinfo";
+$aboutPage = "aboutme.php";
+$projectSection = "index.php#projects";
+$contactSection = "index.php#contact";
+
 include "inc/header.php";
 
 $bannerSubHeading = "Scion Coalition Scheme";
@@ -49,7 +56,7 @@ $scrollDown = "#schemeinfo";
                             progress
                             and
                             see how much they've covered in certain areas.<br>
-                            Total Score: 9212 <br>
+                            Total Score: 13,360 <br>
                             <a href="https://teamtreehouse.com/profiles/elizabethkodjo2" target="_blank"
                                 class="treehouseURL">teamtreehouse.com/elizabethkodjo2</a>
                         </p>

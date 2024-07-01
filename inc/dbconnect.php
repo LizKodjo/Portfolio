@@ -13,8 +13,9 @@ try {
     $db = new PDO("mysql:host=$host;dbname=$dbname",$dbuser,$password);
     // Confirmation of connection
     //echo "Connected to $host successfully. <Br>";
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     // Display error message if connection failed
-    echo "Could not connect to database $dbname :" . $e->getMessage();
+    echo "Could not connect to database $dbname:" . $e->getMessage();
     exit;
 }

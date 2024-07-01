@@ -1,6 +1,5 @@
 <?php
 
-
 // Get information from database
 function getProjectDetails() {
     include('dbconnect.php');
@@ -11,20 +10,19 @@ function getProjectDetails() {
         $allprojects = $projects->fetchAll();
         // echo "Connected to table<br>";
 
-        // print_r($allprojects);
-        
-        return $allprojects;
-        
+        //return all the information in database as an associative array        
+        return $allprojects;        
         
     } catch (PDOException $e) {
+        // Display an error if there is no connection
         echo "Unable to get information from table: " . $e->getMessage();
         exit;
     }
 }
 
-//getProjectDetails();
 
 function projectCards($projectImg, $projectImgAlt, $projectTitle, $projectSubTitle, $projExtraLang, $projectURL, $projectGitHub) {
+    // Create a project card for each project added to database
     return '
     <div class="card col-lg-4 col-sm-4">
         <img class="card-img-top img-thumbnail" src="' .htmlspecialchars($projectImg) .'" alt="' . htmlspecialchars($projectImgAlt) .'">
@@ -48,6 +46,7 @@ function projectCards($projectImg, $projectImgAlt, $projectTitle, $projectSubTit
     ';
 }
 
+// Loop through database and assign data to function's arguments
 foreach (getProjectDetails() as $project) {
     echo projectCards(
         $project["projectImg"],

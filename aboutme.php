@@ -1,9 +1,16 @@
 <?php
 
 $pageTitle = "Elizabeth Kodjo | About Me";
+
+$codePage = "codeexamples.php";
+$scsPage = "scsscheme.php";
+$aboutPage = "#myinfo";
+$projectSection = "index.php#projects";
+$contactSection = "index.php#contact";
+
 include "inc/header.php";
 $bannerSubHeading = "About Me";
-$projectsLink = "index.php#projects";
+//$projectsLink = "index.php#projects";
 $scrollDown = "#myinfo";
 ?>
     <main>
@@ -25,7 +32,7 @@ $scrollDown = "#myinfo";
 
                     <p>
                         To create this website and my other websites that can be viewed <a class="workLink"
-                            href="<?=$projectsLink;?>">here</a>, I used HTML and
+                            href="<?=$projectSection;?>">here</a>, I used HTML and
                         CSS to create and style them respectively, then I used JavaScript to record user events and
                         change elements.
 

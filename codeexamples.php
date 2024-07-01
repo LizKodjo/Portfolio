@@ -1,8 +1,15 @@
 <?php
 
 $pageTitle = "Elizabeth Kodjo | Code Examples";
+
+$codePage = "#mycode";
+$scsPage = "scsscheme.php";
+$aboutPage = "aboutme.php";
+$projectSection = "index.php#projects";
+$contactSection = "index.php#contact";
+
 include "inc/header.php";
-$pageLink = "index.php";
+//$pageLink = "index.php";
 $bannerSubHeading = "Code Examples";
 $scrollDown = "#mycode";
 ?>

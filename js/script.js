@@ -10,24 +10,30 @@ const submit = document.getElementsByClassName('btn-primary');
 const warnMsg = document.getElementById('errorMsg');
 const tabletMenu = document.querySelector('.tabNavbar');
 const sidebar = document.querySelector('.mobnavbar')
+const subBtn = document.querySelector('.submitbtn');
+const formSubmitted = document.querySelector('.formSuccess');
 
 // Prevent submission till validation has been checked.
 
-if (form) {
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        validateInputs();
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     validateInputs();    
+// });
+
+if (subBtn) {
+    subBtn.addEventListener('click', e => {
+        validateInputs(e);
     });
 }
 
-
-const setError = (element, message) => {
+const setError = (element) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMsg');
 
     // Grab error message from validation
-    errorDisplay.innerText = message;
+    //errorDisplay.innerText = message;
     // Show error message
     inputControl.classList.add('errorMsg');
     // Do not show the green input outline
@@ -47,7 +53,7 @@ const setSuccess = element => {
     inputControl.classList.remove('errorMsg');
 };
 
-const validateInputs = () => {
+function validateInputs(e) {
 
     // get the values and remove whitespace
     const fnameValue = fname.value.trim();
@@ -59,12 +65,10 @@ const validateInputs = () => {
     // Check the fields
     if (!fnameValue) {
         // If first name field is blank, show error
-        setError(fname, 'Please enter your first name.');
-    }
-    else if (!fnameValue.match(/^[A-z]\w/g)) {
+        setError(fname);
+    } else if (!fnameValue.match(/^[A-z]\w/g)) {
         setError(fname, 'Please enter a valid name');
-
-
+        e.preventDefault();
     } else {
         // add success class
         setSuccess(fname);
@@ -73,39 +77,51 @@ const validateInputs = () => {
     if (!lnameValue) {
         // If last name field is blank, show error
         setError(lname, 'Please enter your last name.');
-    }
-    else if (!lnameValue.match(/^[A-z]\w/g)) {
+        e.preventDefault();
+    } else if (!lnameValue.match(/^[A-z]\w/g)) {
         setError(lname, 'Please enter a valid name.');
-    }
-    else {
+        e.preventDefault()
+    } else {
         setSuccess(lname);
     }
+
     if (!emailValue) {
         // If email field is blank, show error
         setError(email, 'Please enter an email');
+        e.preventDefault();
     } else if (!isValidEmail(emailValue)) {
         // If email is not valid, show error
         setError(email, 'Please enter a valid email.');
+        e.preventDefault();
     } else {
         setSuccess(email);
     }
+
     if (!phoneValue) {
         // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
+        e.preventDefault();
     } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
         //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
         setError(phone, 'Please enter a valid phone number.');
+        e.preventDefault();
     } else {
         setSuccess(phone);
     }
+    
     if (!messageValue) {
         // If message field is blank, show error
         setError(message, 'Please enter a message.');
+        e.preventDefault()
     } else {
         setSuccess(message);
     }
+    //return form.append("Form submitted successfully.");
 };
+//submitbtn.addEventListener('click', validateInputs);
+
+
 
 
 // Function to check validation of email

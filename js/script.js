@@ -28,18 +28,18 @@ if (subBtn) {
     });
 }
 
-const setError = (element) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.errorMsg');
+// const setError = (element) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.errorMsg');
 
-    // Grab error message from validation
-    //errorDisplay.innerText = message;
-    // Show error message
-    inputControl.classList.add('errorMsg');
-    // Do not show the green input outline
-    inputControl.classList.remove('success');
+//     // Grab error message from validation
+//     //errorDisplay.innerText = message;
+//     // Show error message
+//     inputControl.classList.add('errorMsg');
+//     // Do not show the green input outline
+//     inputControl.classList.remove('success');
 
-};
+// };
 
 const setSuccess = element => {
     const inputControl = element.parentElement;
@@ -66,9 +66,10 @@ function validateInputs(e) {
     if (!fnameValue) {
         // If first name field is blank, show error
         setError(fname);
+        //e.preventDefault();
     } else if (!fnameValue.match(/^[A-z]\w/g)) {
         setError(fname, 'Please enter a valid name');
-        e.preventDefault();
+        //e.preventDefault();
     } else {
         // add success class
         setSuccess(fname);
@@ -77,10 +78,10 @@ function validateInputs(e) {
     if (!lnameValue) {
         // If last name field is blank, show error
         setError(lname, 'Please enter your last name.');
-        e.preventDefault();
+       // e.preventDefault();
     } else if (!lnameValue.match(/^[A-z]\w/g)) {
         setError(lname, 'Please enter a valid name.');
-        e.preventDefault()
+       // e.preventDefault()
     } else {
         setSuccess(lname);
     }
@@ -88,11 +89,11 @@ function validateInputs(e) {
     if (!emailValue) {
         // If email field is blank, show error
         setError(email, 'Please enter an email');
-        e.preventDefault();
+       // e.preventDefault();
     } else if (!isValidEmail(emailValue)) {
         // If email is not valid, show error
         setError(email, 'Please enter a valid email.');
-        e.preventDefault();
+        //e.preventDefault();
     } else {
         setSuccess(email);
     }
@@ -100,12 +101,12 @@ function validateInputs(e) {
     if (!phoneValue) {
         // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
-        e.preventDefault();
+       // e.preventDefault();
     } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
         //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
         setError(phone, 'Please enter a valid phone number.');
-        e.preventDefault();
+        //e.preventDefault();
     } else {
         setSuccess(phone);
     }
@@ -113,7 +114,7 @@ function validateInputs(e) {
     if (!messageValue) {
         // If message field is blank, show error
         setError(message, 'Please enter a message.');
-        e.preventDefault()
+       // e.preventDefault()
     } else {
         setSuccess(message);
     }

@@ -91,3 +91,20 @@
     background-color: darken($logo-color, 10);
     border-color: darken($logo-color, 10);
 }
+
+.serverSuccess {
+    padding: 1em;
+    margin-bottom: 1.25em;
+    background: rgba(143, 247, 94, .5);
+    border: 1px solid rgba(143, 247, 94, .5);
+    border-radius: 3px;
+}
+
+.serverErrors {
+    padding: 1em;
+    margin-bottom: 1.25em;
+    background:rgba(247, 112, 94, .2);
+    border: 1px solid rgba(247, 112, 94, .2);
+    list-style-type: inside;
+    border-radius: 3px;
+}

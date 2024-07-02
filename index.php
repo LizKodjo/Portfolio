@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 $bannerSubHeading = "Web Developer!";
 $pageTitle = "Elizabeth Kodjo | Web Developer";
@@ -12,16 +12,11 @@ $contactSection = "#contact";
 
 include "inc/header.php";
 
-
 $scrollDown = "#contact";
-
 
 // Define variables for form data
 $firstname = $lastname = $email = $phone = $message = "";
 $firstnameErr = $lastnameErr = $emailErr = $phoneErr = $messageErr = $error_message = $formSubmitted = "";
-
-
-
 
 ?>
 
@@ -51,17 +46,39 @@ $firstnameErr = $lastnameErr = $emailErr = $phoneErr = $messageErr = $error_mess
                 </div>
                 <!-- Contact Form -->
                 <div class="col-sm-7">
-                    <form class="form" id="form" method="POST" action="inc/projectContacts.php">
+
+                <?php if(isset($_SESSION['status']) && $_SESSION['status'] === 'error') :
+                $errors = $_SESSION['errors'];
+                ?>
+                <ul class="serverErrors">
                     
+                    <?php foreach($errors as $e) : ?>
+                        <li><?= $e ?></li>
+                    <?php endforeach; ?>
+                   
+                </ul>
+                    <?php
+                    elseif(isset($_SESSION['status']) && $_SESSION['status'] === 'success') :
+                        $data = $_SESSION['data'];
+                    ?>
+                    <div class="serverSuccess">
+                        <p>Form successfully submitted</p>
+                    </div>
+                    <?php endif; ?>
+
+
+                    
+                    <form class="form" id="form" method="POST" action="inc/validateForm.php">                    
                         <div class="mb-3 mt-3">
                             <div class="row formnames">
                                 <div class="col-sm-6 input-control">
                                     
-                                <span class="error"><?= $error_message; ?></span>
+                               
                                     <label for="fname">First Name <small><em>*</em></small></label>
                                     <input type="text" class="form-control" id="fname" placeholder="First Name*"
                                         name="fname" value="<?= $firstname ?>">
-                                    <small class="errorMsg"><?=$firstnameErr ?></small>                           
+                                    <small class="errorMsg"><?=$firstnameErr ?></small> 
+                                    <span class="servererr"><?=$firstnameErr ?></span>                          
                                     
                                 </div>
                                 <div class="col-sm-6 input-control">
@@ -88,10 +105,12 @@ $firstnameErr = $lastnameErr = $emailErr = $phoneErr = $messageErr = $error_mess
                                 <textarea class="form-control" rows="5" id="message" name="message" value="<?=$message ?>"></textarea>
                                 <small class="errorMsg"><?=$messageErr ?></small>
                             </div>
+                            <input type="hidden" name="token" value="">
                             <button type="submit" class="btn btn-primary submitbtn" name="submit">Submit</button>
                             <p class="errorMsg"></p>
+                            
                         </div>
-                        <span class="success"><?= $formSubmitted; ?></span>
+                        
                     </form>
                 </div>
             </div>
@@ -103,3 +122,7 @@ $firstnameErr = $lastnameErr = $emailErr = $phoneErr = $messageErr = $error_mess
 
     <!-- footer -->
    <?php include "inc/footer.php";
+
+   unset($_SESSION['status']);
+   unset($_SESSION['errors']);
+   unset($_SESSION['data']);

@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  if ($errors) {
     $_SESSION['status'] = 'error';  
     $_SESSION['errors'] = $errors;
-    header('Location: ../index.php#contact?result=error');
+    header('Location: ../index.php?result=error#contact');
     die();
  } else {
    

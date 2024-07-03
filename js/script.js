@@ -22,11 +22,11 @@ const formSubmitted = document.querySelector('.formSuccess');
 //     validateInputs();    
 // });
 
-if (subBtn) {
-    subBtn.addEventListener('click', e => {
-        validateInputs(e);
-    });
-}
+// if (subBtn) {
+//     subBtn.addEventListener('click', e => {
+//         validateInputs(e);
+//     });
+// }
 
 // const setError = (element) => {
 //     const inputControl = element.parentElement;

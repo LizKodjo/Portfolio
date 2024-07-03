@@ -156,20 +156,47 @@ $scrollDown = "#mycode";
                     <div id="code-intro2" class="collapse">
                         <div>
                             <p>
-                                I used PHP to loop through news articles
+                                To connect my contact form to my database, I used SQL and
+                                PHP. The form was created using HTML, I initially used Javascript for
+                                client-side validation, but added server-side validation to ensure 
+                            data was secure and santized before saving in the database.                            </p>
+                            <p>
+                                I used prepared statements to prevent any SQL injections and also filtered all 
+                                incoming data.
                             </p>
                             <p>
-                                Coming soon
-                            </p>
-                            <p>
-                                Coming soon
+                                Below is the try/catch I used to save information to my database.
                             </p>
                         </div>
                         <div class="container code-sample">
                             <pre>
         <code class="language-js line-numbers code-exp">
-            // Main colors
-                Copy code here
+            // Connecting to database
+            try {
+        require_once "dbconnect.php";
+            
+        
+        
+        // Sending query to database
+        $stmt = $db->prepare("INSERT INTO portfolio (firstname, lastname, email, phone, message)
+        VALUES(:firstname, :lastname, :email, :phone, :message)");
+        // Binding data before sending to database securely
+        $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
+        $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
+        $stmt->bindParam(':message', $message, PDO::PARAM_STR);
+    
+        $stmt->execute();
+        
+        header("Location: ../index.php");
+       
+       die();
+        
+        } catch (PDOException $e) {
+            echo "Query failed: " . $e->getMessage();
+        }
+    
         </code>
     </pre>
                         </div>

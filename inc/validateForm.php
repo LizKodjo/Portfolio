@@ -2,6 +2,8 @@
 
 session_start();
 
+require "../phpmailer/vendor/autoload.php";
+
 // Define variables for form data
 $firstname = $lastname = $email = $phone = $message = $token = "";
 
@@ -137,5 +139,23 @@ try {
         exit;
     }
 
-
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    
+    
+    $mail = new PHPMailer();
+    $mail->isSMTP();
+    $mail->Host = 'live.smtp.mailtrap.io';
+    $mail->SMTPAuth = true;
+    $mail->Port = 587;
+    $mail->Username = 'api';
+    $mail->Password = '7624ceb5b6c3e28b5c9c6ad764d10a3f';
+    
+    $mail->setFrom($email, $firstname);
+    $mail->addAddress("ellizakodjo@outlook.com", "Elizabeth");
+    
+    $mail->Subject = "Enquiries";
+    $mail->Body = $message;
+    
+    $mail->send();
  

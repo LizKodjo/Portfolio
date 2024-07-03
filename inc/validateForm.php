@@ -30,10 +30,7 @@ $firstname = $lastname = $email = $phone = $message = $token = "";
 $errors = [];
 $data = [];
 
-function esc_str($str) {
-    $esc_str = htmlentities($str, ENT_QUOTES, "UTF-8");
-    return $esc_str;
-}
+
 
 // Sanitise incoming data
 function sanitiseIncoming($data) {
@@ -43,9 +40,6 @@ function sanitiseIncoming($data) {
     return $data;
 }
 
-// if (empty($firstname) || empty($lastname) || empty($email) || empty($phone) || empty($message)) {
-//     $errors[] = "Please complete all required fields";
-//  } 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -110,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  if ($errors) {
     $_SESSION['status'] = 'error';  
     $_SESSION['errors'] = $errors;
-    header('Location: ../index.php?result=error');
+    header('Location: ../index.php#contact?result=error');
     die();
  } else {
    
@@ -130,14 +124,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }   
 
 
- 
-
-
-
 try {
-        require_once "dbconnect.php";
-            
-        
+        require_once "dbconnect.php"; 
         
         // Sending query to database
         $stmt = $db->prepare("INSERT INTO portfolio (firstname, lastname, email, phone, message)
@@ -151,17 +139,15 @@ try {
     
         $stmt->execute();
         
-        header("Location: ../index.php");
+        header("Location: ../index.php#contact");
 
-        
-       
        die();
         
         } catch (PDOException $e) {
             echo "Query failed: " . $e->getMessage();
         }
     } else {
-        header("Location: ../index.php");
+        header("Location: ../index.php#contact");
         exit;
     }
 

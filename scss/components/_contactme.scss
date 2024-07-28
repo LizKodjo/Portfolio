@@ -13,7 +13,7 @@
 }
 
 .main-inner {
-    background:radial-gradient(#333, $black);
+    background: radial-gradient(#333, $black);
     padding: 15px;
     border-top-color: lightseagreen;
     //filter: drop-shadow(0px 15px 50px $black) hue-rotate(225deg);
@@ -85,9 +85,14 @@
     background-color: lighten($black, 10);
 }
 
-.projBtn:hover, .projBtn:active, .projBtn:active:hover,
-.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover,
-.projBtn:focus, .codeBtn:focus {
+.projBtn:hover,
+.projBtn:active,
+.projBtn:active:hover,
+.codeBtn:hover,
+.codeBtn:active,
+.codeBtn:active:hover,
+.projBtn:focus,
+.codeBtn:focus {
     background-color: darken($logo-color, 10);
     border-color: darken($logo-color, 10);
 }
@@ -103,8 +108,12 @@
 .serverErrors {
     padding: 1em;
     margin-bottom: 1.25em;
-    background:rgba(247, 112, 94, .2);
-    border: 1px solid rgba(247, 112, 94, .2);
+    background: indianred;
+    border: 1px solid indianred;
     list-style-type: inside;
     border-radius: 3px;
+
+    li {
+        font-size: 15px;
+    }
 }

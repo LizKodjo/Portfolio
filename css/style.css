@@ -645,8 +645,10 @@ footer .container a {
   background: repeating-conic-gradient(from var(--a), #20b2aa 0%, #20b2aa 5%, transparent 5%, transparent 40%, #20b2aa 50%);
   animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
   animation-play-state: paused;
   -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
   border-radius: 20px;
   filter: drop-shadow(0 15px 50px #000);
   display: flex;
@@ -661,10 +663,13 @@ footer .container a {
   background: repeating-conic-gradient(from var(--a), #20b2aa 0%, #20b2aa 5%, transparent 5%, transparent 40%, #20b2aa 50%);
   animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
   animation-delay: -0.5s;
-  -moz-animation-delay: 0.5s;
+  -moz-animation-delay: -0.5s;
+  -o-animation-delay: -0.5s;
   animation-play-state: paused;
   -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
   border-radius: 20px;
 }
 .box::after {
@@ -694,6 +699,7 @@ footer .container a {
 .box:hover, .box:hover::before {
   animation-play-state: running;
   -moz-animation-play-state: running;
+  -o-animation-play-state: running;
 }
 
 @keyframes rotating {
@@ -836,9 +842,14 @@ footer .container a {
   background-color: #1a1a1a;
 }
 
-.projBtn:hover, .projBtn:active, .projBtn:active:hover,
-.codeBtn:hover, .codeBtn:active, .codeBtn:active:hover,
-.projBtn:focus, .codeBtn:focus {
+.projBtn:hover,
+.projBtn:active,
+.projBtn:active:hover,
+.codeBtn:hover,
+.codeBtn:active,
+.codeBtn:active:hover,
+.projBtn:focus,
+.codeBtn:focus {
   background-color: #188781;
   border-color: #188781;
 }
@@ -854,10 +865,13 @@ footer .container a {
 .serverErrors {
   padding: 1em;
   margin-bottom: 1.25em;
-  background: rgba(247, 112, 94, 0.2);
-  border: 1px solid rgba(247, 112, 94, 0.2);
+  background: indianred;
+  border: 1px solid indianred;
   list-style-type: inside;
   border-radius: 3px;
+}
+.serverErrors li {
+  font-size: 15px;
 }
 
 .main-inner .row .netmatters :hover {

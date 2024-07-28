@@ -12,8 +12,10 @@
             transparent 5%, transparent 40%, $logo-color 50%);
     animation: rotating 2s linear infinite;
     -moz-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
     animation-play-state: paused;
     -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
     border-radius: 20px;
     filter: drop-shadow(0 15px 50px $black);
     display: flex;
@@ -37,12 +39,16 @@
                 transparent 5%, transparent 40%, $logo-color 50%);
         animation: rotating 2s linear infinite;
         -moz-animation: rotating 2s linear infinite;
+        -o-animation: rotating 2s linear infinite;
         animation-delay: -0.5s;
-        -moz-animation-delay: 0.5s;
+        -moz-animation-delay: -0.5s;
+        -o-animation-delay: -0.5s;
         animation-play-state: paused;
         -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
         border-radius: 20px;
     }
+
     &::after {
         content: '';
         position: absolute;
@@ -51,8 +57,9 @@
         border-radius: 15px;
         background: #2d2d39;
     }
+
     a {
-        position:absolute;
+        position: absolute;
         inset: 40px;
         display: flex;
         justify-content: center;
@@ -64,13 +71,16 @@
         z-index: 10000;
         text-transform: uppercase;
         box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
-        border-bottom: 2px solid rgba(255,255, 255, .15);
+        border-bottom: 2px solid rgba(255, 255, 255, .15);
         text-decoration: none;
         //font-size: 15px;
     }
-    &:hover, &:hover::before {
+
+    &:hover,
+    &:hover::before {
         animation-play-state: running;
         -moz-animation-play-state: running;
+        -o-animation-play-state: running;
     }
 }
 
@@ -78,6 +88,7 @@
     0% {
         --a: 0deg;
     }
+
     100% {
         --a: 360deg;
     }

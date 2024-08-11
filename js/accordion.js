@@ -20,7 +20,7 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-$("#mycode").on("hide.bs.collapsed", function () {
+$("#code-intro").on("hide.bs.collapsed", function () {
     $(".codeEg").html('View More...');
 })
 
@@ -28,17 +28,17 @@ $("#code-intro").on("show.bs.collapse", function () {
     $(".codeEg").html('View Less...');
 })
 
-// $("#code-intro1").on("hide.bs.collapse", function () {
-//     $(".codeIntro1").html('View More...');
-// })
+$("#code-intro1").on("hide.bs.collapse", function () {
+    $(".codeIntro1").html('View More...');
+})
 
-// $("#code-intro1").on("show.bs.collapse", function () {
-//     $(".codeIntro1").html('View Less...');
-// })
-// $("#code-intro2").on("hide.bs.collapse", function () {
-//     $(".codeIntro1").html('View More...');
-// })
+$("#code-intro1").on("show.bs.collapse", function () {
+    $(".codeIntro1").html('View Less...');
+})
+$("#code-intro2").on("hide.bs.collapse", function () {
+    $(".codeIntro1").html('View More...');
+})
 
-// $("#code-intro2").on("show.bs.collapse", function () {
-//     $(".codeIntro1").html('View Less...');
-// })
+$("#code-intro2").on("show.bs.collapse", function () {
+    $(".codeIntro1").html('View Less...');
+})

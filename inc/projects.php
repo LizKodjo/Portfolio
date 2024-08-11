@@ -1,8 +1,9 @@
 <?php
 
 // Get information from database
-function getProjectDetails() {
-    include('dbconnect.php');
+function getProjectDetails()
+{
+    include 'dbconnect.php';
 
     try {
         //query table
@@ -11,8 +12,8 @@ function getProjectDetails() {
         // echo "Connected to table<br>";
 
         //return all the information in database as an associative array        
-        return $allprojects;        
-        
+        return $allprojects;
+
     } catch (PDOException $e) {
         // Display an error if there is no connection
         echo "Unable to get information from table: " . $e->getMessage();
@@ -21,11 +22,12 @@ function getProjectDetails() {
 }
 
 
-function projectCards($projectImg, $projectImgAlt, $projectTitle, $projectSubTitle, $projExtraLang, $projectURL, $projectGitHub) {
+function projectCards($projectImg, $projectImgAlt, $projectTitle, $projectSubTitle, $projExtraLang, $projectURL, $projectGitHub)
+{
     // Create a project card for each project added to database
     return '
     <div class="card col-lg-4 col-sm-4">
-        <img class="card-img-top img-thumbnail" src="' .htmlspecialchars($projectImg) .'" alt="' . htmlspecialchars($projectImgAlt) .'">
+        <img class="card-img-top img-thumbnail" src="' . htmlspecialchars($projectImg) . '" alt="' . htmlspecialchars($projectImgAlt) . '">
             <div class="card-body">
                 <h4 class="card-title"> ' . htmlspecialchars($projectTitle) . '</h4>
                 <p class="card-text">' . htmlspecialchars($projectSubTitle) . '</p>
@@ -34,7 +36,7 @@ function projectCards($projectImg, $projectImgAlt, $projectTitle, $projectSubTit
                     <span><i class="fa-brands fa-css3-alt"></i></span>
                     <span><i class="fa-brands fa-sass"></i></span>
                     <span><i class="fa-brands fa-js"></i></span>
-                    <span><i class="'. htmlspecialchars($projExtraLang) . '"></i></span>
+                    <span><i class="' . htmlspecialchars($projExtraLang) . '"></i></span>
                 
                 </div>
                 <a href="' . htmlspecialchars($projectURL) . '" target="_blank"

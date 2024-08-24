@@ -5,11 +5,11 @@
     font-size: $base__font-size;
     line-height: calc($base__line / $base__font-size);
     font-family: $font-family--primary;
-    
+
 }
 
 body {
-    
+
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -37,6 +37,11 @@ body {
 .emailLink {
     color: $white;
 }
+
+.emailLink {
+    font-size: 19px;
+}
+
 .workLink {
     text-decoration: underline;
 }
@@ -92,7 +97,7 @@ html {
     text-align: center;
 }
 
-.treehouseURL, 
+.treehouseURL,
 .treehouseURL:hover {
     font-size: large;
     color: $logo-color;

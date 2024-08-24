@@ -42,7 +42,7 @@ $firstnameErr = $lastnameErr = $emailErr = $phoneErr = $messageErr = $error_mess
                 <p><span><i class="fa-solid fa-mobile-screen"></i></span><a class="telLink" href="tel:+447394705450">
                         07394 705450</a></p>
                 <p><span><i class="fa-regular fa-envelope"></i></span><a class="emailLink"
-                        href="mailto:elizabeth.kodjo@yahoo.com"> ellizakodjo@outlook.com</a></p>
+                        href="mailto:ellizakodjo@outlook.com"> ellizakodjo@outlook.com</a></p>
             </div>
             <!-- Contact Form -->
             <div class="col-sm-7">

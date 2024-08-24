@@ -30,6 +30,10 @@ body {
   color: #fff;
 }
 
+.emailLink {
+  font-size: 19px;
+}
+
 .workLink {
   text-decoration: underline;
 }
@@ -105,9 +109,6 @@ html {
   }
   .projects .myProjects .proj-four {
     padding: 15px 70px 0;
-  }
-  .banner-btn {
-    transform: translate(50%, -50%);
   }
   .headings {
     transform: translate(-50%, -50%);
@@ -200,9 +201,6 @@ html {
   .projects .myProjects .img-thumbnail {
     height: auto;
   }
-  .banner-btn {
-    transform: translate(50%, -50%);
-  }
   .headings {
     transform: translate(-50%, -50%);
   }
@@ -248,9 +246,6 @@ html {
   .smallnavbar {
     display: none;
   }
-  .banner-btn {
-    transform: translate(50%, -50%);
-  }
   .headings {
     transform: translate(-50%, -50%);
   }
@@ -295,9 +290,6 @@ html {
   .headings {
     transform: translate(-25%, -50%);
   }
-  .banner-btn {
-    transform: translate(125%, -50%);
-  }
   footer .container {
     width: 950px;
     justify-content: space-around;
@@ -335,17 +327,13 @@ html {
     width: 1170px;
   }
 }
-@media (max-height: 650px) {
-  .mainlist {
-    justify-content: flex-end;
-  }
-}
 .mainlist {
   height: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   padding: 5px;
+  justify-content: center;
   gap: 30px;
 }
 .mainlist li {
@@ -380,6 +368,11 @@ html {
   overflow: hidden;
 }
 .main-pic .banner-image .bannerpic {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   background: radial-gradient(#333, #000);
 }
@@ -405,8 +398,6 @@ html {
 .banner-btn {
   position: absolute;
   bottom: 8px;
-  right: 50%;
-  z-index: 1;
   color: #fff;
 }
 .banner-btn a {
@@ -478,6 +469,49 @@ html {
   transition: margin-left 0.5s;
 }
 
+.newBurgerBtn {
+  padding: 1rem;
+  background-color: #222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.newBurgerBtn .hamburger-menu {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+}
+.newBurgerBtn .hamburger-menu .ham-bar {
+  width: 70%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.6s, opacity 0.8s, top 0.6s;
+}
+.newBurgerBtn .hamburger-menu .bar-top {
+  top: 25%;
+}
+.newBurgerBtn .hamburger-menu .bar-bottom {
+  top: 75%;
+}
+.newBurgerBtn .hamburger-menu.active .bar-top {
+  transform: translate(-50%, -50%) rotate(-315deg);
+  top: 50%;
+}
+.newBurgerBtn .hamburger-menu.active .bar-mid {
+  opacity: 0;
+}
+.newBurgerBtn .hamburger-menu.active .bar-bottom {
+  transform: translate(-50%, -50%) rotate(-225deg);
+  top: 50%;
+}
+
 footer {
   background-color: lightgrey;
 }
@@ -509,6 +543,64 @@ footer .container a {
 .btn-info:active:hover {
   background-color: lightseagreen;
   border-color: lightseagreen;
+}
+
+.sample-intro {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+.sample-intro .slides {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sample-intro .slides .slide {
+  list-style-type: none;
+  min-height: 400px;
+  width: 5%;
+  overflow: hidden;
+  transition: all 500ms linear;
+}
+.sample-intro .slides .slide a.action {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.sample-intro .slides .slide a.action span {
+  font-weight: 600;
+  color: #fff;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 10%;
+  width: 140px;
+  left: -30%;
+  height: 100px;
+}
+.sample-intro .slides .brand1 {
+  background-color: lightseagreen;
+}
+.sample-intro .slides .brand2 {
+  background-color: #188781;
+}
+.sample-intro .slides .brand3 {
+  background-color: #105c57;
+}
+.sample-intro .slides .brand4 {
+  background-color: #09302e;
+}
+.sample-intro .slides .slide-content {
+  display: block;
+  width: 710px;
+  padding: 40px;
+  color: #fff;
+}
+.sample-intro .slides .active {
+  width: 80%;
+}
+.sample-intro .slides .active a.action {
+  display: none;
 }
 
 .glowing {
@@ -587,9 +679,6 @@ footer .container a {
 }
 .main-title {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-family: sans-serif;
 }
 .main-title::before {
@@ -607,15 +696,8 @@ footer .container a {
   opacity: 0.5;
 }
 
-.sub-heading {
-  position: relative;
-}
 .sub-heading .sub-title {
-  position: absolute;
   color: transparent;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   letter-spacing: 5px;
   text-transform: uppercase;
   background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
@@ -719,7 +801,7 @@ footer .container a {
   height: 100vh;
   width: 100%;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(255, 255, 255, 0.2);
   display: none;
@@ -760,7 +842,8 @@ footer .container a {
   color: #20b2aa;
 }
 
-.menuBtn, .mainLogo {
+.menuBtn,
+.mainLogo {
   position: fixed;
   z-index: 4;
 }
@@ -855,7 +938,7 @@ footer .container a {
 }
 
 .serverSuccess {
-  padding: 1em;
+  padding: 0.5em;
   margin-bottom: 1.25em;
   background: rgba(143, 247, 94, 0.5);
   border: 1px solid rgba(143, 247, 94, 0.5);

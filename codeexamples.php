@@ -23,6 +23,8 @@ $scrollDown = "#mycode";
         <!-- Code Examples -->
         <div class="container sample-intro">
 
+
+
             <div class="container intro" id="mycode">
 
                 <h1 class="code-title">Typing Effect</h1>
@@ -34,17 +36,23 @@ $scrollDown = "#mycode";
             <div id="code-intro" class="collapse">
                 <div>
                     <p>
-                        To create a typing effect on the main title that shows on all my pages, I used JavaScript.
+                        To create a typing effect on the main title that shows on all my pages, I
+                        used JavaScript.
                         Before that, I created the main title, using HTML and CSS.
                     </p>
                     <p>
-                        The first step I took was to create an empty array. This would serve as a 'box' to collect
-                        the letters after I had 'split' them up, to get the individual characters.<br>
-                        My next step was to fetch the element storing the main title, using the split() to extract
+                        The first step I took was to create an empty array. This would serve as a
+                        'box' to collect
+                        the letters after I had 'split' them up, to get the individual
+                        characters.<br>
+                        My next step was to fetch the element storing the main title, using the
+                        split() to extract
                         the characters
                         which I then stored in the empty array I had created earlier.</p>
-                    <p>Using a 'for' loop, I viewed the characters individually and pushed them into a
-                        second empty array I had created. Adding a timer with the setTimeout(), slowed down when the
+                    <p>Using a 'for' loop, I viewed the characters individually and pushed them into
+                        a
+                        second empty array I had created. Adding a timer with the setTimeout(),
+                        slowed down when the
                         characters showed on the screen.
                     </p>
 
@@ -88,9 +96,9 @@ $scrollDown = "#mycode";
                 </div>
             </div>
 
-            <!-- <div class="container intro" id="colorMap"> -->
-            <h1 class="code-title">Color Map</h1>
-            <!-- </div> -->
+            <div class="container intro" id="colorMap">
+                <h1 class="code-title">Color Map</h1>
+            </div>
             <button type="button" class="btn btn-info codeIntro1" data-toggle="collapse" data-target="#code-intro1">View
                 More...</button>
             <div id="code-intro1" class="collapse">
@@ -146,9 +154,9 @@ $scrollDown = "#mycode";
                 </div>
             </div>
 
-            <!-- <div class="container intro" id="colorMap"> -->
-            <h1 class="code-title">Database setup</h1>
-            <!-- </div> -->
+            <div class="container intro" id="colorMap">
+                <h1 class="code-title">Database setup</h1>
+            </div>
             <button type="button" class="btn btn-info codeIntro2" data-toggle="collapse" data-target="#code-intro2">View
                 More...</button>
             <div id="code-intro2" class="collapse">
@@ -159,7 +167,8 @@ $scrollDown = "#mycode";
                         client-side validation, but added server-side validation to ensure
                         data was secure and santized before saving in the database. </p>
                     <p>
-                        I used prepared statements to prevent any SQL injections and also filtered all
+                        I used prepared statements to prevent any SQL injections and also filtered
+                        all
                         incoming data.
                     </p>
                     <p>
@@ -199,8 +208,8 @@ $scrollDown = "#mycode";
     </pre>
                 </div>
             </div>
-
         </div>
+
 
         <div class="scrollUpSec">
             <h3 class="scrollTopBtn"><a href="#">Scroll up</a></h3>

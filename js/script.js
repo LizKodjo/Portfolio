@@ -13,6 +13,8 @@ const sidebar = document.querySelector('.mobnavbar')
 const subBtn = document.querySelector('.submitbtn');
 const formSubmitted = document.querySelector('.formSuccess');
 
+const hamMenu = document.querySelector('.hamburger-menu');
+
 // Prevent submission till validation has been checked.
 
 
@@ -78,10 +80,10 @@ function validateInputs(e) {
     if (!lnameValue) {
         // If last name field is blank, show error
         setError(lname, 'Please enter your last name.');
-       // e.preventDefault();
+        // e.preventDefault();
     } else if (!lnameValue.match(/^[A-z]\w/g)) {
         setError(lname, 'Please enter a valid name.');
-       // e.preventDefault()
+        // e.preventDefault()
     } else {
         setSuccess(lname);
     }
@@ -89,7 +91,7 @@ function validateInputs(e) {
     if (!emailValue) {
         // If email field is blank, show error
         setError(email, 'Please enter an email');
-       // e.preventDefault();
+        // e.preventDefault();
     } else if (!isValidEmail(emailValue)) {
         // If email is not valid, show error
         setError(email, 'Please enter a valid email.');
@@ -101,7 +103,7 @@ function validateInputs(e) {
     if (!phoneValue) {
         // If phone number field is blank, show error message
         setError(phone, 'Please enter your phone number');
-       // e.preventDefault();
+        // e.preventDefault();
     } else if (!phoneValue.match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/g)) {
         //} else if ((!isValidPhone(phoneValue) || isNaN(phoneValue) )) {
         // If phone number is not valid
@@ -110,11 +112,11 @@ function validateInputs(e) {
     } else {
         setSuccess(phone);
     }
-    
+
     if (!messageValue) {
         // If message field is blank, show error
         setError(message, 'Please enter a message.');
-       // e.preventDefault()
+        // e.preventDefault()
     } else {
         setSuccess(message);
     }
@@ -209,3 +211,10 @@ function hideSidebar() {
     sidebar.style.left = '-766px'
     //sidebar.style.display = 'none';
 }
+
+// New burger menu for tablet
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    tabletMenu.classList.toggle('active');
+})

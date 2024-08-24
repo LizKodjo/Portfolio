@@ -22,5 +22,75 @@
     &:active:hover {
         @include btncolor;
     }
-    
+
+}
+
+.sample-intro {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+
+    .slides {
+        width: 100%;
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .slide {
+            list-style-type: none;
+            min-height: 400px;
+            width: 5%;
+            overflow: hidden;
+            transition: all 500ms linear;
+
+            a.action {
+                display: block;
+                height: 100%;
+                position: relative;
+
+                span {
+                    font-weight: 600;
+                    color: $white;
+                    transform: rotate(270deg);
+                    position: absolute;
+                    top: 10%;
+                    width: 140px;
+                    left: -30%;
+                    height: 100px;
+                }
+            }
+
+        }
+
+        .brand1 {
+            background-color: lightseagreen;
+        }
+
+        .brand2 {
+            background-color: darken(lightseagreen, 10);
+        }
+
+        .brand3 {
+            background-color: darken(lightseagreen, 20);
+        }
+
+        .brand4 {
+            background-color: darken(lightseagreen, 30);
+        }
+
+        .slide-content {
+            display: block;
+            width: 710px;
+            padding: 40px;
+            color: $white;
+        }
+
+        .active {
+            width: 80%;
+
+            a.action {
+                display: none;
+            }
+        }
+    }
 }

@@ -7,6 +7,11 @@
 
         // Banner image
         .bannerpic {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             min-height: 100vh;
             //width: 100%;
             // filter: grayscale(100%);
@@ -31,8 +36,8 @@
 .banner-btn {
     position: absolute;
     bottom: 8px;
-    right: 50%;
-    z-index: 1;
+    // right: 50%;
+    // z-index: 1;
     color: $white;
 
     // transform: translate(50%, -50%);

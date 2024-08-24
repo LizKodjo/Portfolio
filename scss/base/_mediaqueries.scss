@@ -179,6 +179,7 @@
         justify-content: space-around;
         align-content: stretch;
         align-items: center;
+
         .getintouch {
             display: flex;
             flex-direction: row;
@@ -388,7 +389,7 @@
 
     .banner-image,
     .main-inner {
-        margin-left: 300px;
+        margin-left: 250px;
         border-left: 3px inset $logo-color;
     }
 

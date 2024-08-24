@@ -3,6 +3,14 @@
 session_start();
 require_once "dbconnect.php";
 $smtp_connection = parse_ini_file(__DIR__ . "/../portfolio.env");
+use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require "../vendor/phpmailer/phpmailer/src/Exception.php";
+require "../vendor/phpmailer/phpmailer/src/PHPMailer.php";
+require "../vendor/phpmailer/phpmailer/src/SMTP.php";
+
+require "../vendor/autoload.php";
 
 // create variables for connection 
 // $smtp_host = $smtp_connection["SMTP_HOST"];
@@ -14,6 +22,8 @@ $phpmailer_smtpAuth = $smtp_connection["PHPMAILER_SMTPAuth"];
 $phpmailer_port = $smtp_connection["PHPMAILER_Port"];
 $phpmailer_username = $smtp_connection["PHPMAILER_Username"];
 $phpmailer_password = $smtp_connection["PHPMAILER_Password"];
+
+
 
 
 // Define variables for form data
@@ -145,31 +155,83 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 
-require "../phpmailer/vendor/autoload.php";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+if (isset($_POST['submit'])) {
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
 
-$toEmail = '$smtp_username';
+    try {
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->isSMTP();
+        $mail->SMTPAuth = '$phpmailer_smtpAuth';       //Enable SMTP authentication
+        //Send using SMTP
+        $mail->Host = '$smtp_host';                     //Set the SMTP server to send through
 
-try {
-    $phpmailer = new PHPMailer();
-    $phpmailer->isSMTP();
-    $phpmailer->Host = $phpmailer_host;
-    $phpmailer->SMTPAuth = $phpmailer_smtpAuth;
-    $phpmailer->Port = $phpmailer_port;
-    $phpmailer->Username = $phpmailer_username;
-    $phpmailer->Password = $phpmailer_password;
+        $mail->Username = '$phpmailer_username';                     //SMTP username
+        $mail->Password = '$phpmailer_password';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+        $mail->Port = '$phpmailer_port';                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    $mail->setFrom($email);
-    $mail->addAddress($toEmail);
+        //Recipients
+        $mail->setFrom('ellizakodjo@outlook.com', 'Mailer');
+        $mail->addAddress('$email', 'Joe User');     //Add a recipient
 
-    $mail->Subject = "Enquiries";
-    $mail->Body = "<p>Name: {$firstname} </p><p>Last name: {$lastname} </p><p>Email: {$email} </p>
-<p>Phone: {$phone} </p><p> {$message} </p>";
 
-    $mail->send();
-    echo "email sent";
-} catch (Exception $e) {
-    echo "Something went wrong";
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'New Enquiry';
+        $mail->Body = '<h3>Hi, you received an enquiry</h3>
+    <h4>Firstname: ' . $firstname . ' </h4>
+    <h4>Lastname: ' . $lastname . ' </h4>
+    <h4>Email: ' . $email . ' </h4>
+    <h4>Phone: ' . $phone . ' </h4>
+    <h4>Message: ' . $message . ' </h4>
+    ';
+
+
+        if ($mail->send()) {
+            $_SESSION['status'] = "Thank you for contacting me - Liz";
+            header("Location: {$_SERVER["HTTP_REFERER"]}");
+            exit(0);
+        } else {
+            $_SESSION['status'] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            header("Location: {$_SERVER["HTTP_REFERER"]}");
+            exit(0);
+        }
+
+
+        // echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+} else {
+    header('Location:../index.php');
+    exit();
 }
+
+
+
+// $toEmail = '$smtp_username';
+
+// // try {
+// $phpmailer = new PHPMailer(true);
+// $phpmailer->isSMTP();
+// $phpmailer->Host = $phpmailer_host;
+// $phpmailer->SMTPAuth = $phpmailer_smtpAuth;
+// $phpmailer->Port = $phpmailer_port;
+// $phpmailer->Username = $phpmailer_username;
+// $phpmailer->Password = $phpmailer_password;
+
+// $mail->setFrom($email);
+// $mail->addAddress($toEmail);
+
+// $mail->Subject = "Enquiries";
+// $mail->Body = "<p>Name: {$firstname} </p><p>Last name: {$lastname} </p><p>Email: {$email} </p>
+// <p>Phone: {$phone} </p><p> {$message} </p>";
+
+// $mail->send();
+// echo "email sent";
+// } catch (Exception $e) {
+// echo "Something went wrong";
+// }

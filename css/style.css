@@ -54,6 +54,8 @@ html {
 }
 
 .scrollTopBtn {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
@@ -307,6 +309,8 @@ html {
   }
   .sidebar {
     display: block;
+    position: fixed;
+    margin-top: 90px;
   }
   .main-pic .container .main-inner {
     margin-left: 0;
@@ -325,6 +329,11 @@ html {
   footer .container {
     justify-content: space-evenly;
     width: 1170px;
+  }
+}
+@media (max-height: 650px) {
+  .mainlist {
+    justify-content: flex-end;
   }
 }
 .mainlist {
@@ -523,8 +532,26 @@ footer .container a {
   color: #000;
 }
 
-.collapsed {
-  background-color: lightseagreen;
+#accordion .card-header #collapseOne {
+  background-color: red;
+}
+#accordion .card-header .btn {
+  color: #fff;
+}
+#accordion .card-header .btn:hover {
+  color: lightseagreen;
+}
+#accordion .card-header .btn:focus, #accordion .card-header .btn:active {
+  color: #000;
+}
+#accordion .header1 {
+  background-color: #105c57;
+}
+#accordion .header2 {
+  background-color: #14716c;
+}
+#accordion .header3 {
+  background-color: #188781;
 }
 
 .btn-info {
@@ -543,64 +570,6 @@ footer .container a {
 .btn-info:active:hover {
   background-color: lightseagreen;
   border-color: lightseagreen;
-}
-
-.sample-intro {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-.sample-intro .slides {
-  width: 100%;
-  display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.sample-intro .slides .slide {
-  list-style-type: none;
-  min-height: 400px;
-  width: 5%;
-  overflow: hidden;
-  transition: all 500ms linear;
-}
-.sample-intro .slides .slide a.action {
-  display: block;
-  height: 100%;
-  position: relative;
-}
-.sample-intro .slides .slide a.action span {
-  font-weight: 600;
-  color: #fff;
-  transform: rotate(270deg);
-  position: absolute;
-  top: 10%;
-  width: 140px;
-  left: -30%;
-  height: 100px;
-}
-.sample-intro .slides .brand1 {
-  background-color: lightseagreen;
-}
-.sample-intro .slides .brand2 {
-  background-color: #188781;
-}
-.sample-intro .slides .brand3 {
-  background-color: #105c57;
-}
-.sample-intro .slides .brand4 {
-  background-color: #09302e;
-}
-.sample-intro .slides .slide-content {
-  display: block;
-  width: 710px;
-  padding: 40px;
-  color: #fff;
-}
-.sample-intro .slides .active {
-  width: 80%;
-}
-.sample-intro .slides .active a.action {
-  display: none;
 }
 
 .glowing {

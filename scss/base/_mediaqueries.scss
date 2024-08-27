@@ -395,6 +395,8 @@
 
     .sidebar {
         display: block;
+        position: fixed;
+        margin-top: 90px;
     }
 
     .main-pic {
@@ -432,8 +434,8 @@
     }
 }
 
-// @media(max-height: 650px) {
-//     .mainlist {
-//         justify-content: flex-end;
-//     }
-// }
+@media(max-height: 650px) {
+    .mainlist {
+        justify-content: flex-end;
+    }
+}

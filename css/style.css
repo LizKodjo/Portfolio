@@ -532,26 +532,11 @@ footer .container a {
   color: #000;
 }
 
-#accordion .card-header #collapseOne {
-  background-color: red;
-}
 #accordion .card-header .btn {
   color: #fff;
 }
-#accordion .card-header .btn:hover {
+#accordion .card-header .btn:hover, #accordion .card-header .btn:focus, #accordion .card-header .btn:active {
   color: lightseagreen;
-}
-#accordion .card-header .btn:focus, #accordion .card-header .btn:active {
-  color: #000;
-}
-#accordion .header1 {
-  background-color: #105c57;
-}
-#accordion .header2 {
-  background-color: #14716c;
-}
-#accordion .header3 {
-  background-color: #188781;
 }
 
 .btn-info {

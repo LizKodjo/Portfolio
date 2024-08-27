@@ -5,38 +5,32 @@
 #accordion {
     .card-header {
 
-
-        #collapseOne {
-            background-color: red;
-        }
-
         .btn {
             color: $white;
 
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
                 color: lightseagreen;
             }
 
-            &:focus,
-            &:active {
-                color: $black;
-            }
+
 
         }
     }
 
-    .header1 {
-        background-color: darken(lightseagreen, 20);
-    }
+    // .header1 {
+    //     background-color: darken(lightseagreen, 20);
+    // }
 
-    .header2 {
-        background-color: darken(lightseagreen, 15);
-    }
+    // .header2 {
+    //     background-color: darken(lightseagreen, 15);
+    // }
 
-    .header3 {
-        background-color: darken(lightseagreen, 10);
-    }
+    // .header3 {
+    //     background-color: darken(lightseagreen, 10);
+    // }
 }
 
 .btn-info {

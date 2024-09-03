@@ -7,30 +7,17 @@
 
         .btn {
             color: $white;
-
+            font-size: 25px;
+            text-wrap: balance;
 
             &:hover,
             &:focus,
             &:active {
+
                 color: lightseagreen;
             }
-
-
-
         }
     }
-
-    // .header1 {
-    //     background-color: darken(lightseagreen, 20);
-    // }
-
-    // .header2 {
-    //     background-color: darken(lightseagreen, 15);
-    // }
-
-    // .header3 {
-    //     background-color: darken(lightseagreen, 10);
-    // }
 }
 
 .btn-info {

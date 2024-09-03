@@ -534,6 +534,8 @@ footer .container a {
 
 #accordion .card-header .btn {
   color: #fff;
+  font-size: 25px;
+  text-wrap: balance;
 }
 #accordion .card-header .btn:hover, #accordion .card-header .btn:focus, #accordion .card-header .btn:active {
   color: lightseagreen;

@@ -14,6 +14,7 @@ const subBtn = document.querySelector('.submitbtn');
 const formSubmitted = document.querySelector('.formSuccess');
 
 const hamMenu = document.querySelector('.hamburger-menu');
+const new_burger = document.querySelector('.tabHamburger');
 
 // Prevent submission till validation has been checked.
 
@@ -217,4 +218,10 @@ function hideSidebar() {
 hamMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     tabletMenu.classList.toggle('active');
+})
+
+
+
+new_burger.addEventListener('click', function () {
+    new_burger.classList.toggle('is-active');
 })

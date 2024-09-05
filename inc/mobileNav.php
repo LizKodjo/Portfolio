@@ -12,17 +12,24 @@
 
         <ul class="mobnav__links">
 
-            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $aboutPage; ?>" class="mobnav__link">About Me</a></li>
+            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $aboutPage; ?>" class="mobnav__link">About
+                    Me</a></li>
             <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $projectSection; ?>" class="mobnav__link">My
                     Portfolio</a></li>
-            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $codePage; ?>" class="mobnav__link">Coding Examples</a></li>
-            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $scsPage; ?>" class="mobnav__link">SCS</a></li>
-            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $contactSection; ?>" class="mobnav__link">Contact
+            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $codePage; ?>" class="mobnav__link">Coding
+                    Examples</a></li>
+            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $scsPage; ?>" class="mobnav__link">SCS</a>
+            </li>
+            <li class="mobnav__item" onclick="hideSidebar()"><a href="<?= $contactSection; ?>"
+                    class="mobnav__link">Contact
                     Me</a>
             </li>
 
         </ul>
-        <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i
-                class="fa-brands fa-github"></i></a>
+        <div>
+            <a href="https://github.com/LizKodjo/Portfolio.git" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/elizabeth-kodjo/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
     </nav>
 </div>

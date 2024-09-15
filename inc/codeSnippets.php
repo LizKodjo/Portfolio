@@ -19,37 +19,43 @@ function codeSnippets()
     }
 }
 
-function displaySnippets($codeTitle, $codeIntro, $codeExp)
+function displaySnippets($codeCount, $codeNum, $codeCollapsed, $codeTitle, $codeShow, $codeIntro, $codeExp)
 {
     // Create section to display code snippets
 
     return '
-    
-        <div class="container intro" id="mycode">
-            <h1 class="code-title">' . htmlspecialchars($codeTitle) . ' </h1>
-        </div>
-
-        <button type="button" class="btn btn-info codeEg" data-toggle="collapse" data-target="#code-intro">View
-                More...</button>
-        
-        <div id="code-intro" class="collapse">
-            <div>
-                <p>' . htmlspecialchars($codeIntro) . ' </p>
+        <div class="card">
+            <div class="card-header header' . htmlspecialchars($codeCount) . '">
+                <a href="#collapse' . htmlspecialchars($codeNum) . '" class="' . htmlspecialchars($codeCollapsed) . ' btn" data-bs-toggle="collapse">' . htmlspecialchars($codeTitle) . '</a>
             </div>
+
+            <div id="collapse' . htmlspecialchars($codeNum) . '" class="' . htmlspecialchars($codeShow) . '" data-bs-parent="#accordion">
+                <div class="card-body">
+                    <div>
+                        ' . htmlspecialchars($codeIntro) . '
+                    </div>
+                    <div class="container code-sample">
+                        <pre>
+                            <code class="language-js line-numbers code-exp">
+                                ' . htmlspecialchars($codeExp) . '
+                            </code>
+                        </pre>
+                    </div>
+
+                </div>
+            </div> 
         </div>
-        <div class="container code-sample">
-            <pre>
-            <code class="language-js line-numbers code-exp">' . htmlspecialchars($codeExp) . ' </code>
-            </pre>
-        </div>
-    
     ';
 }
 
 // Loop through database
 foreach (codeSnippets() as $snippet) {
     echo displaySnippets(
+        $snippet["codeCount"],
+        $snippet["codeNum"],
+        $snippet["codeCollapsed"],
         $snippet["codeTitle"],
+        $snippet["codeShow"],
         $snippet["codeIntro"],
         $snippet["codeExp"]
     );

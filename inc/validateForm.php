@@ -212,26 +212,3 @@ if (isset($_POST['submit'])) {
 
 
 
-// $toEmail = '$smtp_username';
-
-// // try {
-// $phpmailer = new PHPMailer(true);
-// $phpmailer->isSMTP();
-// $phpmailer->Host = $phpmailer_host;
-// $phpmailer->SMTPAuth = $phpmailer_smtpAuth;
-// $phpmailer->Port = $phpmailer_port;
-// $phpmailer->Username = $phpmailer_username;
-// $phpmailer->Password = $phpmailer_password;
-
-// $mail->setFrom($email);
-// $mail->addAddress($toEmail);
-
-// $mail->Subject = "Enquiries";
-// $mail->Body = "<p>Name: {$firstname} </p><p>Last name: {$lastname} </p><p>Email: {$email} </p>
-// <p>Phone: {$phone} </p><p> {$message} </p>";
-
-// $mail->send();
-// echo "email sent";
-// } catch (Exception $e) {
-// echo "Something went wrong";
-// }

@@ -37,6 +37,9 @@ body {
 .workLink {
   text-decoration: underline;
 }
+.workLink:hover, .workLink:focus {
+  color: lightseagreen;
+}
 
 .telLink:hover,
 .telLink:focus,

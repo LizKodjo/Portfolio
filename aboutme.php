@@ -38,6 +38,10 @@ $scrollDown = "#myinfo";
                     databases to store both users and my data securely.
 
                 </p>
+                <p>
+                    The skills I gained during my intensive training covered the following:
+                    HTML, CSS, JavaScript, PHP, Laravel, C# and .Net framework.
+                </p>
             </div>
 
 

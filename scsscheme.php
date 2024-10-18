@@ -56,7 +56,7 @@ $scrollDown = "#schemeinfo";
                         progress
                         and
                         see how much they've covered in certain areas.<br>
-                        Total Score: 16,042 <br>
+                        Total Score: 18,216 <br>
                         <a href="https://teamtreehouse.com/profiles/elizabethkodjo2" target="_blank"
                             class="treehouseURL">teamtreehouse.com/elizabethkodjo2</a>
                     </p>
